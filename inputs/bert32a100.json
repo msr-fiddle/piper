@@ -1,0 +1,5159 @@
+{
+  "maxDevices": 10,
+  "maxMemoryPerDevice": 80000000000.0,
+  "bandwidth": 25000000000.0,
+  "maxBatchSize": 128,
+  "nodes": [
+    {
+      "id": 0,
+      "name": "tensor",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "Embedding",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.001116,
+            "parameterSize": 200824320.0,
+            "memoryUsageA": 1982464.0,
+            "memoryUsageB": 401648640.0,
+            "syncTimeFw": {
+              "0": 0.0,
+              "2": 0.0
+            },
+            "syncTimeBw": {
+              "3": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.001413,
+            "parameterSize": 200824320.0,
+            "memoryUsageA": 16384.0,
+            "memoryUsageB": 403614720.0,
+            "syncTimeFw": {
+              "0": 0.0,
+              "2": 0.0
+            },
+            "syncTimeBw": {
+              "3": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0032779999999999997,
+            "parameterSize": 104348160.0,
+            "memoryUsageA": 1987072.0,
+            "memoryUsageB": 208696320.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.004850999999999999,
+            "parameterSize": 104348160.0,
+            "memoryUsageA": 16384.0,
+            "memoryUsageB": 210667008.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0037860000000000003,
+            "parameterSize": 56110080.0,
+            "memoryUsageA": 2052608.0,
+            "memoryUsageB": 112220160.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.004745,
+            "parameterSize": 56110080.0,
+            "memoryUsageA": 16384.0,
+            "memoryUsageB": 114190848.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.004097,
+            "parameterSize": 31991040.0,
+            "memoryUsageA": 1987072.0,
+            "memoryUsageB": 63982080.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0051199999999999996,
+            "parameterSize": 31991040.0,
+            "memoryUsageA": 16384.0,
+            "memoryUsageB": 65952768.0,
+            "syncTimeFw": {
+              "0": 8192.0,
+              "2": 8192.0
+            },
+            "syncTimeBw": {
+              "3": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "tensor",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 8192.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "1": 8192.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030492,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "1": 0.0,
+              "4": 0.0
+            },
+            "syncTimeBw": {
+              "5": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040685,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "1": 0.0,
+              "4": 0.0
+            },
+            "syncTimeBw": {
+              "5": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018696,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024891,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011928000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015604,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009396000000000002,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.012055999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "1": 31457280.0,
+              "4": 16777216.0
+            },
+            "syncTimeBw": {
+              "5": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "tensor",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "13": 0.0,
+              "14": 0.0,
+              "15": 0.0,
+              "16": 0.0,
+              "17": 0.0,
+              "18": 0.0,
+              "19": 0.0,
+              "20": 0.0,
+              "21": 0.0,
+              "22": 0.0,
+              "23": 0.0,
+              "24": 0.0,
+              "25": 0.0,
+              "26": 0.0,
+              "27": 0.0,
+              "28": 0.0,
+              "29": 0.0,
+              "30": 0.0,
+              "31": 0.0,
+              "32": 0.0,
+              "33": 0.0,
+              "34": 0.0,
+              "35": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "13": 0.0,
+              "14": 0.0,
+              "15": 0.0,
+              "16": 0.0,
+              "17": 0.0,
+              "18": 0.0,
+              "19": 0.0,
+              "20": 0.0,
+              "21": 0.0,
+              "22": 0.0,
+              "23": 0.0,
+              "24": 0.0,
+              "25": 0.0,
+              "26": 0.0,
+              "27": 0.0,
+              "28": 0.0,
+              "29": 0.0,
+              "30": 0.0,
+              "31": 0.0,
+              "32": 0.0,
+              "33": 0.0,
+              "34": 0.0,
+              "35": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 16777216.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "3": 16777216.0,
+              "5": 16777216.0,
+              "6": 16777216.0,
+              "7": 16777216.0,
+              "8": 16777216.0,
+              "9": 16777216.0,
+              "10": 16777216.0,
+              "11": 16777216.0,
+              "12": 16777216.0,
+              "13": 16777216.0,
+              "14": 16777216.0,
+              "15": 16777216.0,
+              "16": 16777216.0,
+              "17": 16777216.0,
+              "18": 16777216.0,
+              "19": 16777216.0,
+              "20": 16777216.0,
+              "21": 16777216.0,
+              "22": 16777216.0,
+              "23": 16777216.0,
+              "24": 16777216.0,
+              "25": 16777216.0,
+              "26": 16777216.0,
+              "27": 16777216.0,
+              "28": 16777216.0,
+              "29": 16777216.0,
+              "30": 16777216.0,
+              "31": 16777216.0,
+              "32": 16777216.0,
+              "33": 16777216.0,
+              "34": 16777216.0,
+              "35": 16777216.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030473999999999994,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "3": 0.0
+            },
+            "syncTimeBw": {
+              "6": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040657,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "3": 0.0
+            },
+            "syncTimeBw": {
+              "6": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018720999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024887,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011886,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0156,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009333000000000001,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.012285,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "3": 16777216.0
+            },
+            "syncTimeBw": {
+              "6": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030479,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "5": 0.0
+            },
+            "syncTimeBw": {
+              "7": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.04068,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "5": 0.0
+            },
+            "syncTimeBw": {
+              "7": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018733,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024776,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.012048,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015549,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009427,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011855,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "5": 16777216.0
+            },
+            "syncTimeBw": {
+              "7": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030452,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "6": 0.0
+            },
+            "syncTimeBw": {
+              "8": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040667999999999996,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "6": 0.0
+            },
+            "syncTimeBw": {
+              "8": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018727,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024752,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.01199,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015568,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009383,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011864999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "6": 16777216.0
+            },
+            "syncTimeBw": {
+              "8": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030484,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "7": 0.0
+            },
+            "syncTimeBw": {
+              "9": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040651,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "7": 0.0
+            },
+            "syncTimeBw": {
+              "9": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018728,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024744,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011886,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015586999999999998,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009457,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011728,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "7": 16777216.0
+            },
+            "syncTimeBw": {
+              "9": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030372000000000003,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "10": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040675,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "10": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018702,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024727000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011997,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.016281,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009392999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011753,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "8": 16777216.0
+            },
+            "syncTimeBw": {
+              "10": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030345000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "9": 0.0
+            },
+            "syncTimeBw": {
+              "11": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040636000000000005,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "9": 0.0
+            },
+            "syncTimeBw": {
+              "11": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018725000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.02476,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011927,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015574999999999999,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009461,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011695,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "9": 16777216.0
+            },
+            "syncTimeBw": {
+              "11": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030306999999999997,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "12": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040553,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "12": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018678,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024824,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011943,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015567000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009495,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011716,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "10": 16777216.0
+            },
+            "syncTimeBw": {
+              "12": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030394000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "11": 0.0
+            },
+            "syncTimeBw": {
+              "13": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040568,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "11": 0.0
+            },
+            "syncTimeBw": {
+              "13": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018698,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024789,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.01188,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015550999999999999,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009477,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011764,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "11": 16777216.0
+            },
+            "syncTimeBw": {
+              "13": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030361,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "12": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "12": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018699,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024757,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011968,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015633,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009326999999999998,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011711,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "12": 16777216.0
+            },
+            "syncTimeBw": {
+              "14": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030290000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "13": 0.0
+            },
+            "syncTimeBw": {
+              "15": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "13": 0.0
+            },
+            "syncTimeBw": {
+              "15": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018716999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024812,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011992,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015567000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009342,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011748,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "13": 16777216.0
+            },
+            "syncTimeBw": {
+              "15": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030285,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "14": 0.0
+            },
+            "syncTimeBw": {
+              "16": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040801,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "14": 0.0
+            },
+            "syncTimeBw": {
+              "16": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018691,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024875,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011921,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015557,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009413999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011696999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "14": 16777216.0
+            },
+            "syncTimeBw": {
+              "16": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030306999999999997,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "15": 0.0
+            },
+            "syncTimeBw": {
+              "17": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040873,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "15": 0.0
+            },
+            "syncTimeBw": {
+              "17": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018702,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024768000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011943,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009363,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011757,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "15": 16777216.0
+            },
+            "syncTimeBw": {
+              "17": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030303999999999998,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "16": 0.0
+            },
+            "syncTimeBw": {
+              "18": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040784,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "16": 0.0
+            },
+            "syncTimeBw": {
+              "18": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018666000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.02478,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011904000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015578999999999999,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009349,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011775,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "16": 16777216.0
+            },
+            "syncTimeBw": {
+              "18": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030324000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "17": 0.0
+            },
+            "syncTimeBw": {
+              "19": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040744,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "17": 0.0
+            },
+            "syncTimeBw": {
+              "19": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018696,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024789,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011914000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015559,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009392999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011713,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "17": 16777216.0
+            },
+            "syncTimeBw": {
+              "19": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030288000000000002,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "18": 0.0
+            },
+            "syncTimeBw": {
+              "20": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040884000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "18": 0.0
+            },
+            "syncTimeBw": {
+              "20": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018678999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024792,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011913,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560999999999998,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009344,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011704,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "18": 16777216.0
+            },
+            "syncTimeBw": {
+              "20": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030473999999999994,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "19": 0.0
+            },
+            "syncTimeBw": {
+              "21": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040636000000000005,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "19": 0.0
+            },
+            "syncTimeBw": {
+              "21": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018743,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024762999999999997,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011894,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560999999999998,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009329,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011752,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "19": 16777216.0
+            },
+            "syncTimeBw": {
+              "21": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030479,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "20": 0.0
+            },
+            "syncTimeBw": {
+              "22": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040553,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "20": 0.0
+            },
+            "syncTimeBw": {
+              "22": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018678999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024793000000000003,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011975,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015563,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009402,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011698999999999998,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "20": 16777216.0
+            },
+            "syncTimeBw": {
+              "22": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030452,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "21": 0.0
+            },
+            "syncTimeBw": {
+              "23": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040568,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "21": 0.0
+            },
+            "syncTimeBw": {
+              "23": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018715000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024821000000000003,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011899,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015550999999999999,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009384,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011695,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "21": 16777216.0
+            },
+            "syncTimeBw": {
+              "23": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030484,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "22": 0.0
+            },
+            "syncTimeBw": {
+              "24": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "22": 0.0
+            },
+            "syncTimeBw": {
+              "24": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018701000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024766999999999997,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011928000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015552,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009348,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011713,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "22": 16777216.0
+            },
+            "syncTimeBw": {
+              "24": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030372000000000003,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "23": 0.0
+            },
+            "syncTimeBw": {
+              "25": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "23": 0.0
+            },
+            "syncTimeBw": {
+              "25": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.01868,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024795,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011927,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015563,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009354,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011753,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "23": 16777216.0
+            },
+            "syncTimeBw": {
+              "25": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030345000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "24": 0.0
+            },
+            "syncTimeBw": {
+              "26": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040801,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "24": 0.0
+            },
+            "syncTimeBw": {
+              "26": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.01873,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024801,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011924,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009347,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011687,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "24": 16777216.0
+            },
+            "syncTimeBw": {
+              "26": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030306999999999997,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "25": 0.0
+            },
+            "syncTimeBw": {
+              "27": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040873,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "25": 0.0
+            },
+            "syncTimeBw": {
+              "27": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018682,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024791,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011937,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015567000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009318,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011716,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "25": 16777216.0
+            },
+            "syncTimeBw": {
+              "27": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030394000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "26": 0.0
+            },
+            "syncTimeBw": {
+              "28": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040784,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "26": 0.0
+            },
+            "syncTimeBw": {
+              "28": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018701000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024742999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011936,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015555000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009325,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011725,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "26": 16777216.0
+            },
+            "syncTimeBw": {
+              "28": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030361,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "27": 0.0
+            },
+            "syncTimeBw": {
+              "29": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040744,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "27": 0.0
+            },
+            "syncTimeBw": {
+              "29": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018696,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024771,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.01193,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015548,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009319,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011725,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "27": 16777216.0
+            },
+            "syncTimeBw": {
+              "29": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030290000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "28": 0.0
+            },
+            "syncTimeBw": {
+              "30": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040884000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "28": 0.0
+            },
+            "syncTimeBw": {
+              "30": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018713,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024763999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011953,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015567000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009333000000000001,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011696999999999999,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "28": 16777216.0
+            },
+            "syncTimeBw": {
+              "30": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030285,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "29": 0.0
+            },
+            "syncTimeBw": {
+              "31": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040636000000000005,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "29": 0.0
+            },
+            "syncTimeBw": {
+              "31": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018713,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024772000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011946000000000002,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015571000000000002,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.00933,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011743,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "29": 16777216.0
+            },
+            "syncTimeBw": {
+              "31": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030306999999999997,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "30": 0.0
+            },
+            "syncTimeBw": {
+              "32": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040553,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "30": 0.0
+            },
+            "syncTimeBw": {
+              "32": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018672,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024777,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011932,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015564,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009355,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011748,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "30": 16777216.0
+            },
+            "syncTimeBw": {
+              "32": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030303999999999998,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "31": 0.0
+            },
+            "syncTimeBw": {
+              "33": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040568,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "31": 0.0
+            },
+            "syncTimeBw": {
+              "33": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018690000000000002,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024797,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011906999999999997,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560999999999998,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009367,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011744999999999998,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "31": 16777216.0
+            },
+            "syncTimeBw": {
+              "33": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030324000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "32": 0.0
+            },
+            "syncTimeBw": {
+              "34": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "32": 0.0
+            },
+            "syncTimeBw": {
+              "34": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018684,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024807,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011925999999999999,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015560000000000001,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009373,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011753,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "32": 16777216.0
+            },
+            "syncTimeBw": {
+              "34": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030288000000000002,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "33": 0.0
+            },
+            "syncTimeBw": {
+              "35": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040829000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "33": 0.0
+            },
+            "syncTimeBw": {
+              "35": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018730999999999998,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024780999999999997,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011916,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015576,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009317,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011881,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "33": 16777216.0
+            },
+            "syncTimeBw": {
+              "35": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "name": "ParallelTransformerLayer",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.030324000000000004,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 606478336.0,
+            "memoryUsageB": 353994240.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "34": 0.0
+            },
+            "syncTimeBw": {
+              "36": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.040801,
+            "parameterSize": 176997120.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 912500224.0,
+            "syncTimeFw": {
+              "4": 0.0,
+              "34": 0.0
+            },
+            "syncTimeBw": {
+              "36": 0.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.018678,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 341581824.0,
+            "memoryUsageB": 177020160.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.024779,
+            "parameterSize": 88510080.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 470367488.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.011896,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 208543744.0,
+            "memoryUsageB": 88533120.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.015556,
+            "parameterSize": 44266560.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 248711296.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.009328,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 142811136.0,
+            "memoryUsageB": 44289600.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.011725,
+            "parameterSize": 22144800.0,
+            "memoryUsageA": 48234496.0,
+            "memoryUsageB": 138604096.0,
+            "syncTimeFw": {
+              "4": 31457280.0,
+              "34": 16777216.0
+            },
+            "syncTimeBw": {
+              "36": 31457280.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "name": "Pooler",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 0.0
+            },
+            "syncTimeBw": {}
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 0.0
+            },
+            "syncTimeBw": {}
+          }
+        ],
+        "2": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          }
+        ],
+        "4": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          }
+        ],
+        "8": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 14749440.0,
+            "memoryUsageA": 31457280.0,
+            "memoryUsageB": 29498880.0,
+            "syncTimeFw": {
+              "35": 31457280.0
+            },
+            "syncTimeBw": {}
+          }
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "sourceId": 0,
+      "destId": 1,
+      "communicationCost": 8192.0
+    },
+    {
+      "sourceId": 2,
+      "destId": 1,
+      "communicationCost": 8192.0
+    },
+    {
+      "sourceId": 1,
+      "destId": 3,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 3,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 5,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 3,
+      "destId": 5,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 6,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 5,
+      "destId": 6,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 7,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 6,
+      "destId": 7,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 8,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 7,
+      "destId": 8,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 9,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 8,
+      "destId": 9,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 10,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 9,
+      "destId": 10,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 11,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 10,
+      "destId": 11,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 12,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 11,
+      "destId": 12,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 13,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 12,
+      "destId": 13,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 14,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 13,
+      "destId": 14,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 15,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 14,
+      "destId": 15,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 16,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 15,
+      "destId": 16,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 17,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 16,
+      "destId": 17,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 18,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 17,
+      "destId": 18,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 19,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 18,
+      "destId": 19,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 20,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 19,
+      "destId": 20,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 21,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 20,
+      "destId": 21,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 22,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 21,
+      "destId": 22,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 23,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 22,
+      "destId": 23,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 24,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 23,
+      "destId": 24,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 25,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 24,
+      "destId": 25,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 26,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 25,
+      "destId": 26,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 27,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 26,
+      "destId": 27,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 28,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 27,
+      "destId": 28,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 29,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 28,
+      "destId": 29,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 30,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 29,
+      "destId": 30,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 31,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 30,
+      "destId": 31,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 32,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 31,
+      "destId": 32,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 33,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 32,
+      "destId": 33,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 34,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 33,
+      "destId": 34,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 35,
+      "communicationCost": 31457280.0
+    },
+    {
+      "sourceId": 34,
+      "destId": 35,
+      "communicationCost": 16777216.0
+    },
+    {
+      "sourceId": 35,
+      "destId": 36,
+      "communicationCost": 31457280.0
+    }
+  ]
+}

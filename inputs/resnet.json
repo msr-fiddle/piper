@@ -1,0 +1,7053 @@
+{
+  "maxDevices": 10,
+  "maxMemoryPerDevice": 80000000000.0,
+  "bandwidth": 25000000000.0,
+  "maxBatchSize": 128,
+  "nodes": [
+    {
+      "id": 0,
+      "name": "node77",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.678,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "1": 0.0
+            },
+            "syncTimeBw": {
+              "9": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.9139999999999997,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187032207.36,
+            "syncTimeFw": {
+              "1": 0.0
+            },
+            "syncTimeBw": {
+              "9": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "node76",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.114,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "2": 0.0
+            },
+            "syncTimeBw": {
+              "0": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.432,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187548303.36,
+            "syncTimeFw": {
+              "2": 0.0
+            },
+            "syncTimeBw": {
+              "0": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "node75",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.575,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "3": 0.0
+            },
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.9359999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "3": 0.0
+            },
+            "syncTimeBw": {
+              "1": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "node74",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.951,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "4": 0.0
+            },
+            "syncTimeBw": {
+              "2": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.5259999999999998,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "4": 0.0
+            },
+            "syncTimeBw": {
+              "2": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "node73",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.9640000000000004,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 1179648.0,
+            "syncTimeFw": {
+              "5": 0.0
+            },
+            "syncTimeBw": {
+              "3": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.312,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47935651.84,
+            "syncTimeFw": {
+              "5": 0.0
+            },
+            "syncTimeBw": {
+              "3": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "node72",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.582,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "6": 0.0
+            },
+            "syncTimeBw": {
+              "4": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.94,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "6": 0.0
+            },
+            "syncTimeBw": {
+              "4": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "node71",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.932,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "7": 0.0
+            },
+            "syncTimeBw": {
+              "5": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.4860000000000002,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "7": 0.0
+            },
+            "syncTimeBw": {
+              "5": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "node70",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.881,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "158": 0.0
+            },
+            "syncTimeBw": {
+              "6": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.161,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47280291.84,
+            "syncTimeFw": {
+              "158": 0.0
+            },
+            "syncTimeBw": {
+              "6": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "node79",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.896,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "9": 0.0
+            },
+            "syncTimeBw": {
+              "25": 0.0,
+              "21": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.316,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "9": 0.0
+            },
+            "syncTimeBw": {
+              "25": 0.0,
+              "21": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "node78",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "0": 0.0,
+              "158": 0.0
+            },
+            "syncTimeBw": {
+              "8": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "0": 0.0,
+              "158": 0.0
+            },
+            "syncTimeBw": {
+              "8": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "node141",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.548,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "90": 0.0
+            },
+            "syncTimeBw": {
+              "86": 0.0,
+              "12": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.34,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "90": 0.0
+            },
+            "syncTimeBw": {
+              "86": 0.0,
+              "12": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "node151",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.9750000000000001,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 32768.0,
+            "syncTimeFw": {
+              "12": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.51,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46788771.84,
+            "syncTimeFw": {
+              "12": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "node150",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 8.694,
+            "parameterSize": 8388608.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 16777216.0,
+            "syncTimeFw": {
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "11": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 11.161000000000001,
+            "parameterSize": 8388608.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 63533219.84,
+            "syncTimeFw": {
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "11": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "node153",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.854,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "14": 0.0
+            },
+            "syncTimeBw": {
+              "173": 0.0,
+              "16": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.33,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "14": 0.0
+            },
+            "syncTimeBw": {
+              "173": 0.0,
+              "16": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "node152",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "11": 0.0,
+              "34": 0.0
+            },
+            "syncTimeBw": {
+              "13": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "11": 0.0,
+              "34": 0.0
+            },
+            "syncTimeBw": {
+              "13": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "node155",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.526,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "16": 0.0
+            },
+            "syncTimeBw": {
+              "18": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.905,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11697192.96,
+            "syncTimeFw": {
+              "16": 0.0
+            },
+            "syncTimeBw": {
+              "18": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "node154",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.913,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8388608.0,
+            "syncTimeFw": {
+              "13": 0.0
+            },
+            "syncTimeBw": {
+              "15": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.404,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 20077608.96,
+            "syncTimeFw": {
+              "13": 0.0
+            },
+            "syncTimeBw": {
+              "15": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name": "node157",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.712,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 18874368.0,
+            "syncTimeFw": {
+              "18": 0.0
+            },
+            "syncTimeBw": {
+              "20": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.375,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 30563368.96,
+            "syncTimeFw": {
+              "18": 0.0
+            },
+            "syncTimeBw": {
+              "20": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "node156",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.37,
+            "parameterSize": 0.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "15": 0.0
+            },
+            "syncTimeBw": {
+              "17": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.65,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11689000.96,
+            "syncTimeFw": {
+              "15": 0.0
+            },
+            "syncTimeBw": {
+              "17": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name": "node159",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.379,
+            "parameterSize": 0.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "20": 0.0
+            },
+            "syncTimeBw": {
+              "171": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.6789999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11689000.96,
+            "syncTimeFw": {
+              "20": 0.0
+            },
+            "syncTimeBw": {
+              "171": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name": "node158",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.531,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "17": 0.0
+            },
+            "syncTimeBw": {
+              "19": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.914,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11697192.96,
+            "syncTimeFw": {
+              "17": 0.0
+            },
+            "syncTimeBw": {
+              "19": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name": "node88",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 9.445,
+            "parameterSize": 2097152.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 4194304.0,
+            "syncTimeFw": {
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "22": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 12.222000000000001,
+            "parameterSize": 2097152.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 97706311.68,
+            "syncTimeFw": {
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "22": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "node89",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.6760000000000002,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "21": 0.0
+            },
+            "syncTimeBw": {
+              "56": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.583,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "21": 0.0
+            },
+            "syncTimeBw": {
+              "56": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name": "node82",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.904,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "26": 0.0
+            },
+            "syncTimeBw": {
+              "24": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.404,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "26": 0.0
+            },
+            "syncTimeBw": {
+              "24": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "node83",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 10.785,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "23": 0.0
+            },
+            "syncTimeBw": {
+              "29": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 14.132,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "23": 0.0
+            },
+            "syncTimeBw": {
+              "29": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "node80",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 7.481999999999999,
+            "parameterSize": 524288.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1048576.0,
+            "syncTimeFw": {
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "26": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 10.053,
+            "parameterSize": 524288.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 94560583.68,
+            "syncTimeFw": {
+              "8": 0.0
+            },
+            "syncTimeBw": {
+              "26": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name": "node81",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.55,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "25": 0.0
+            },
+            "syncTimeBw": {
+              "23": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.313,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93516103.68,
+            "syncTimeFw": {
+              "25": 0.0
+            },
+            "syncTimeBw": {
+              "23": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name": "node86",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.876,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "30": 0.0
+            },
+            "syncTimeBw": {
+              "28": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.34,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "30": 0.0
+            },
+            "syncTimeBw": {
+              "28": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name": "node87",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.658,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "27": 0.0
+            },
+            "syncTimeBw": {
+              "56": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.542,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "27": 0.0
+            },
+            "syncTimeBw": {
+              "56": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name": "node84",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.725,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "24": 0.0
+            },
+            "syncTimeBw": {
+              "30": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.202,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "24": 0.0
+            },
+            "syncTimeBw": {
+              "30": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "node85",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.449,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "29": 0.0
+            },
+            "syncTimeBw": {
+              "27": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.773,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "29": 0.0
+            },
+            "syncTimeBw": {
+              "27": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name": "node9",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 7.28,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 294912.0,
+            "syncTimeFw": {
+              "32": 0.0
+            },
+            "syncTimeBw": {
+              "44": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 9.620000000000001,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93806919.68,
+            "syncTimeFw": {
+              "32": 0.0
+            },
+            "syncTimeBw": {
+              "44": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name": "node8",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.66,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "41": 0.0
+            },
+            "syncTimeBw": {
+              "31": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.9189999999999996,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "41": 0.0
+            },
+            "syncTimeBw": {
+              "31": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name": "node148",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.114,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 8388608.0,
+            "syncTimeFw": {
+              "36": 0.0
+            },
+            "syncTimeBw": {
+              "34": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.811999999999999,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 55144611.84,
+            "syncTimeFw": {
+              "36": 0.0
+            },
+            "syncTimeBw": {
+              "34": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name": "node149",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.954,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 32768.0,
+            "syncTimeFw": {
+              "33": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.485,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46788771.84,
+            "syncTimeFw": {
+              "33": 0.0
+            },
+            "syncTimeBw": {
+              "14": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "name": "node1",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 18.962,
+            "parameterSize": 0.0,
+            "memoryUsageA": 77070336.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "38": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 37.924,
+            "parameterSize": 0.0,
+            "memoryUsageA": 6936330.239999999,
+            "memoryUsageB": 70134005.76,
+            "syncTimeFw": {},
+            "syncTimeBw": {
+              "38": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "name": "node147",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.35900000000000004,
+            "parameterSize": 0.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "83": 0.0
+            },
+            "syncTimeBw": {
+              "33": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.639,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11689000.96,
+            "syncTimeFw": {
+              "83": 0.0
+            },
+            "syncTimeBw": {
+              "33": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "name": "node3",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 6.059,
+            "parameterSize": 512.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "38": 0.0
+            },
+            "syncTimeBw": {
+              "40": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 9.005,
+            "parameterSize": 512.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374049054.72,
+            "syncTimeFw": {
+              "38": 0.0
+            },
+            "syncTimeBw": {
+              "40": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "name": "node2",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 14.257,
+            "parameterSize": 37632.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 75264.0,
+            "syncTimeFw": {
+              "35": 0.0
+            },
+            "syncTimeBw": {
+              "37": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 23.963,
+            "parameterSize": 37632.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374123294.72,
+            "syncTimeFw": {
+              "35": 0.0
+            },
+            "syncTimeBw": {
+              "37": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "name": "node5",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.702,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "40": 0.0
+            },
+            "syncTimeBw": {
+              "42": 0.0,
+              "48": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.906000000000001,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "40": 0.0
+            },
+            "syncTimeBw": {
+              "42": 0.0,
+              "48": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "name": "node4",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.891,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "37": 0.0
+            },
+            "syncTimeBw": {
+              "39": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.248,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "37": 0.0
+            },
+            "syncTimeBw": {
+              "39": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "name": "node7",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.599,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "42": 0.0
+            },
+            "syncTimeBw": {
+              "32": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.379,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "42": 0.0
+            },
+            "syncTimeBw": {
+              "32": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "name": "node6",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.779,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 32768.0,
+            "syncTimeFw": {
+              "39": 0.0
+            },
+            "syncTimeBw": {
+              "41": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.533,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93544775.68,
+            "syncTimeFw": {
+              "39": 0.0
+            },
+            "syncTimeBw": {
+              "41": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "name": "node11",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.897,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "44": 0.0
+            },
+            "syncTimeBw": {
+              "46": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.3900000000000001,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "44": 0.0
+            },
+            "syncTimeBw": {
+              "46": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "name": "node10",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.519,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "31": 0.0
+            },
+            "syncTimeBw": {
+              "43": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.215,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "31": 0.0
+            },
+            "syncTimeBw": {
+              "43": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "name": "node13",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.133,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "46": 0.0
+            },
+            "syncTimeBw": {
+              "50": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.197,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374052126.72,
+            "syncTimeFw": {
+              "46": 0.0
+            },
+            "syncTimeBw": {
+              "50": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "name": "node12",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.7989999999999995,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "43": 0.0
+            },
+            "syncTimeBw": {
+              "45": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.5120000000000005,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374179102.72,
+            "syncTimeFw": {
+              "43": 0.0
+            },
+            "syncTimeBw": {
+              "45": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "name": "node15",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.109,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "48": 0.0
+            },
+            "syncTimeBw": {
+              "50": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.154,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374052126.72,
+            "syncTimeFw": {
+              "48": 0.0
+            },
+            "syncTimeBw": {
+              "50": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "name": "node14",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.52,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "39": 0.0
+            },
+            "syncTimeBw": {
+              "47": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.975,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374179102.72,
+            "syncTimeFw": {
+              "39": 0.0
+            },
+            "syncTimeBw": {
+              "47": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "name": "node17",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.648,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "50": 0.0
+            },
+            "syncTimeBw": {
+              "52": 0.0,
+              "77": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 8.333,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "50": 0.0
+            },
+            "syncTimeBw": {
+              "52": 0.0,
+              "77": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "name": "node16",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "45": 0.0,
+              "47": 0.0
+            },
+            "syncTimeBw": {
+              "49": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "45": 0.0,
+              "47": 0.0
+            },
+            "syncTimeBw": {
+              "49": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "name": "node19",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.765,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "52": 0.0
+            },
+            "syncTimeBw": {
+              "79": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.706,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "52": 0.0
+            },
+            "syncTimeBw": {
+              "79": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "name": "node18",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.308,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "49": 0.0
+            },
+            "syncTimeBw": {
+              "51": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.838,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93643079.68,
+            "syncTimeFw": {
+              "49": 0.0
+            },
+            "syncTimeBw": {
+              "51": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "name": "node99",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.318,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "54": 0.0
+            },
+            "syncTimeBw": {
+              "131": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.864,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "54": 0.0
+            },
+            "syncTimeBw": {
+              "131": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "name": "node98",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.675,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "61": 0.0
+            },
+            "syncTimeBw": {
+              "53": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.9399999999999995,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "61": 0.0
+            },
+            "syncTimeBw": {
+              "53": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "name": "node91",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.52,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "56": 0.0
+            },
+            "syncTimeBw": {
+              "131": 0.0,
+              "58": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.303,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "56": 0.0
+            },
+            "syncTimeBw": {
+              "131": 0.0,
+              "58": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "name": "node90",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "22": 0.0,
+              "28": 0.0
+            },
+            "syncTimeBw": {
+              "55": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "22": 0.0,
+              "28": 0.0
+            },
+            "syncTimeBw": {
+              "55": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "name": "node93",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.754,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "58": 0.0
+            },
+            "syncTimeBw": {
+              "60": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.2610000000000001,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "58": 0.0
+            },
+            "syncTimeBw": {
+              "60": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "name": "node92",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.878,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "55": 0.0
+            },
+            "syncTimeBw": {
+              "57": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.513,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 25475153.92,
+            "syncTimeFw": {
+              "55": 0.0
+            },
+            "syncTimeBw": {
+              "57": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "name": "node95",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.6310000000000002,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "60": 0.0
+            },
+            "syncTimeBw": {
+              "62": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.141,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "60": 0.0
+            },
+            "syncTimeBw": {
+              "62": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "name": "node94",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.442,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "57": 0.0
+            },
+            "syncTimeBw": {
+              "59": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.761,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "57": 0.0
+            },
+            "syncTimeBw": {
+              "59": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "name": "node97",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.441,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "62": 0.0
+            },
+            "syncTimeBw": {
+              "54": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.76,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "62": 0.0
+            },
+            "syncTimeBw": {
+              "54": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "name": "node96",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.718,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "59": 0.0
+            },
+            "syncTimeBw": {
+              "61": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.188,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "59": 0.0
+            },
+            "syncTimeBw": {
+              "61": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "name": "node139",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.6280000000000001,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "64": 0.0
+            },
+            "syncTimeBw": {
+              "90": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.482,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "64": 0.0
+            },
+            "syncTimeBw": {
+              "90": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "name": "node138",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.9619999999999997,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "69": 0.0
+            },
+            "syncTimeBw": {
+              "63": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.228999999999999,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "69": 0.0
+            },
+            "syncTimeBw": {
+              "63": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "name": "node133",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.757,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "66": 0.0
+            },
+            "syncTimeBw": {
+              "72": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.266,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "66": 0.0
+            },
+            "syncTimeBw": {
+              "72": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "name": "node132",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.005,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "67": 0.0
+            },
+            "syncTimeBw": {
+              "65": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.478,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 25475153.92,
+            "syncTimeFw": {
+              "67": 0.0
+            },
+            "syncTimeBw": {
+              "65": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 67,
+      "name": "node131",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.5350000000000001,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "68": 0.0
+            },
+            "syncTimeBw": {
+              "66": 0.0,
+              "90": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.332,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "68": 0.0
+            },
+            "syncTimeBw": {
+              "66": 0.0,
+              "90": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 68,
+      "name": "node130",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "89": 0.0,
+              "92": 0.0
+            },
+            "syncTimeBw": {
+              "67": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "89": 0.0,
+              "92": 0.0
+            },
+            "syncTimeBw": {
+              "67": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 69,
+      "name": "node137",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.465,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "70": 0.0
+            },
+            "syncTimeBw": {
+              "64": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.807,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "70": 0.0
+            },
+            "syncTimeBw": {
+              "64": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 70,
+      "name": "node136",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.7010000000000001,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "71": 0.0
+            },
+            "syncTimeBw": {
+              "69": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.154,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "71": 0.0
+            },
+            "syncTimeBw": {
+              "69": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 71,
+      "name": "node135",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.808,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "72": 0.0
+            },
+            "syncTimeBw": {
+              "70": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.105,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "72": 0.0
+            },
+            "syncTimeBw": {
+              "70": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 72,
+      "name": "node134",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.451,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "65": 0.0
+            },
+            "syncTimeBw": {
+              "71": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.777,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "65": 0.0
+            },
+            "syncTimeBw": {
+              "71": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 73,
+      "name": "node28",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.596,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "78": 0.0
+            },
+            "syncTimeBw": {
+              "74": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.879,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93643079.68,
+            "syncTimeFw": {
+              "78": 0.0
+            },
+            "syncTimeBw": {
+              "74": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 74,
+      "name": "node29",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.782,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "73": 0.0
+            },
+            "syncTimeBw": {
+              "104": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.7409999999999997,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "73": 0.0
+            },
+            "syncTimeBw": {
+              "104": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 75,
+      "name": "node24",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.556,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "82": 0.0
+            },
+            "syncTimeBw": {
+              "76": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.005000000000001,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374179102.72,
+            "syncTimeFw": {
+              "82": 0.0
+            },
+            "syncTimeBw": {
+              "76": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "name": "node25",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.162,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "75": 0.0
+            },
+            "syncTimeBw": {
+              "77": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.258,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374052126.72,
+            "syncTimeFw": {
+              "75": 0.0
+            },
+            "syncTimeBw": {
+              "77": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 77,
+      "name": "node26",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "49": 0.0,
+              "76": 0.0
+            },
+            "syncTimeBw": {
+              "78": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "49": 0.0,
+              "76": 0.0
+            },
+            "syncTimeBw": {
+              "78": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 78,
+      "name": "node27",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.647,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "77": 0.0
+            },
+            "syncTimeBw": {
+              "73": 0.0,
+              "106": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 8.337,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "77": 0.0
+            },
+            "syncTimeBw": {
+              "73": 0.0,
+              "106": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 79,
+      "name": "node20",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.913,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "51": 0.0
+            },
+            "syncTimeBw": {
+              "80": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.408,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "51": 0.0
+            },
+            "syncTimeBw": {
+              "80": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "name": "node21",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 7.0489999999999995,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 294912.0,
+            "syncTimeFw": {
+              "79": 0.0
+            },
+            "syncTimeBw": {
+              "81": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 9.16,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93806919.68,
+            "syncTimeFw": {
+              "79": 0.0
+            },
+            "syncTimeBw": {
+              "81": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "name": "node22",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.7839999999999998,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "80": 0.0
+            },
+            "syncTimeBw": {
+              "82": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.7359999999999998,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "80": 0.0
+            },
+            "syncTimeBw": {
+              "82": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "name": "node23",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.907,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "81": 0.0
+            },
+            "syncTimeBw": {
+              "75": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.397,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "81": 0.0
+            },
+            "syncTimeBw": {
+              "75": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "name": "node146",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.533,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "85": 0.0
+            },
+            "syncTimeBw": {
+              "36": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.916,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11697192.96,
+            "syncTimeFw": {
+              "85": 0.0
+            },
+            "syncTimeBw": {
+              "36": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "name": "node144",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.592,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "87": 0.0
+            },
+            "syncTimeBw": {
+              "85": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.951,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "87": 0.0
+            },
+            "syncTimeBw": {
+              "85": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "name": "node145",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 9.525,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 18874368.0,
+            "syncTimeFw": {
+              "84": 0.0
+            },
+            "syncTimeBw": {
+              "83": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 12.526,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 30563368.96,
+            "syncTimeFw": {
+              "84": 0.0
+            },
+            "syncTimeBw": {
+              "83": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "name": "node142",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 7.827,
+            "parameterSize": 2097152.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 4194304.0,
+            "syncTimeFw": {
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "87": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 10.384,
+            "parameterSize": 2097152.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 50950307.84,
+            "syncTimeFw": {
+              "10": 0.0
+            },
+            "syncTimeBw": {
+              "87": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "name": "node143",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.006,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "86": 0.0
+            },
+            "syncTimeBw": {
+              "84": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.5879999999999999,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46764195.84,
+            "syncTimeFw": {
+              "86": 0.0
+            },
+            "syncTimeBw": {
+              "84": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "name": "node128",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.6799999999999997,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "98": 0.0
+            },
+            "syncTimeBw": {
+              "89": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.951,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "98": 0.0
+            },
+            "syncTimeBw": {
+              "89": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "name": "node129",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.631,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "88": 0.0
+            },
+            "syncTimeBw": {
+              "68": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.49,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "88": 0.0
+            },
+            "syncTimeBw": {
+              "68": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "name": "node140",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "63": 0.0,
+              "67": 0.0
+            },
+            "syncTimeBw": {
+              "10": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "63": 0.0,
+              "67": 0.0
+            },
+            "syncTimeBw": {
+              "10": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "name": "node120",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "113": 0.0,
+              "117": 0.0
+            },
+            "syncTimeBw": {
+              "92": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "113": 0.0,
+              "117": 0.0
+            },
+            "syncTimeBw": {
+              "92": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "name": "node121",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.525,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "91": 0.0
+            },
+            "syncTimeBw": {
+              "68": 0.0,
+              "93": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.314,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "91": 0.0
+            },
+            "syncTimeBw": {
+              "68": 0.0,
+              "93": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 93,
+      "name": "node122",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.6870000000000003,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "92": 0.0
+            },
+            "syncTimeBw": {
+              "94": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.133,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 25475153.92,
+            "syncTimeFw": {
+              "92": 0.0
+            },
+            "syncTimeBw": {
+              "94": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 94,
+      "name": "node123",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.6839999999999999,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "93": 0.0
+            },
+            "syncTimeBw": {
+              "95": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.1219999999999999,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "93": 0.0
+            },
+            "syncTimeBw": {
+              "95": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "name": "node124",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.416,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "94": 0.0
+            },
+            "syncTimeBw": {
+              "96": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.706,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "94": 0.0
+            },
+            "syncTimeBw": {
+              "96": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 96,
+      "name": "node125",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.4189999999999996,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "95": 0.0
+            },
+            "syncTimeBw": {
+              "97": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.704,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "95": 0.0
+            },
+            "syncTimeBw": {
+              "97": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "name": "node126",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.6890000000000001,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "96": 0.0
+            },
+            "syncTimeBw": {
+              "98": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.1320000000000001,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "96": 0.0
+            },
+            "syncTimeBw": {
+              "98": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 98,
+      "name": "node127",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.44299999999999995,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "97": 0.0
+            },
+            "syncTimeBw": {
+              "88": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.743,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "97": 0.0
+            },
+            "syncTimeBw": {
+              "88": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "name": "node39",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.676,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "100": 0.0
+            },
+            "syncTimeBw": {
+              "127": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.973,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187026063.36,
+            "syncTimeFw": {
+              "100": 0.0
+            },
+            "syncTimeBw": {
+              "127": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "name": "node38",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 8.093,
+            "parameterSize": 131072.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 262144.0,
+            "syncTimeFw": {
+              "105": 0.0
+            },
+            "syncTimeBw": {
+              "99": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 10.703,
+            "parameterSize": 131072.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187286159.36,
+            "syncTimeFw": {
+              "105": 0.0
+            },
+            "syncTimeBw": {
+              "99": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 101,
+      "name": "node33",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.918,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "102": 0.0
+            },
+            "syncTimeBw": {
+              "108": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.4340000000000002,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "102": 0.0
+            },
+            "syncTimeBw": {
+              "108": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "name": "node32",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.8079999999999998,
+            "parameterSize": 512.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 1024.0,
+            "syncTimeFw": {
+              "103": 0.0
+            },
+            "syncTimeBw": {
+              "101": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.78,
+            "parameterSize": 512.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93513031.68,
+            "syncTimeFw": {
+              "103": 0.0
+            },
+            "syncTimeBw": {
+              "101": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 103,
+      "name": "node31",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 7.823,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 294912.0,
+            "syncTimeFw": {
+              "104": 0.0
+            },
+            "syncTimeBw": {
+              "102": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 9.878,
+            "parameterSize": 147456.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93806919.68,
+            "syncTimeFw": {
+              "104": 0.0
+            },
+            "syncTimeBw": {
+              "102": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 104,
+      "name": "node30",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.938,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "74": 0.0
+            },
+            "syncTimeBw": {
+              "103": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.458,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "74": 0.0
+            },
+            "syncTimeBw": {
+              "103": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 105,
+      "name": "node37",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.649,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "106": 0.0
+            },
+            "syncTimeBw": {
+              "100": 0.0,
+              "121": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 8.335,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "106": 0.0
+            },
+            "syncTimeBw": {
+              "100": 0.0,
+              "121": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "name": "node36",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "78": 0.0,
+              "107": 0.0
+            },
+            "syncTimeBw": {
+              "105": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374048030.72,
+            "syncTimeFw": {
+              "78": 0.0,
+              "107": 0.0
+            },
+            "syncTimeBw": {
+              "105": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "name": "node35",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.246,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "108": 0.0
+            },
+            "syncTimeBw": {
+              "106": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.418,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374052126.72,
+            "syncTimeFw": {
+              "108": 0.0
+            },
+            "syncTimeBw": {
+              "106": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 108,
+      "name": "node34",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.835,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 411041792.0,
+            "memoryUsageB": 131072.0,
+            "syncTimeFw": {
+              "101": 0.0
+            },
+            "syncTimeBw": {
+              "107": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.313000000000001,
+            "parameterSize": 65536.0,
+            "memoryUsageA": 36993761.28,
+            "memoryUsageB": 374179102.72,
+            "syncTimeFw": {
+              "101": 0.0
+            },
+            "syncTimeBw": {
+              "107": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 109,
+      "name": "node115",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.545,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "110": 0.0
+            },
+            "syncTimeBw": {
+              "112": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.970000000000001,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "110": 0.0
+            },
+            "syncTimeBw": {
+              "112": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 110,
+      "name": "node114",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.417,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "115": 0.0
+            },
+            "syncTimeBw": {
+              "109": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.711,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "115": 0.0
+            },
+            "syncTimeBw": {
+              "109": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 111,
+      "name": "node117",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.424,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "112": 0.0
+            },
+            "syncTimeBw": {
+              "118": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.721,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "112": 0.0
+            },
+            "syncTimeBw": {
+              "118": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 112,
+      "name": "node116",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.683,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "109": 0.0
+            },
+            "syncTimeBw": {
+              "111": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.117,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "109": 0.0
+            },
+            "syncTimeBw": {
+              "111": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 113,
+      "name": "node111",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.548,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "114": 0.0
+            },
+            "syncTimeBw": {
+              "91": 0.0,
+              "116": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.3600000000000003,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "114": 0.0
+            },
+            "syncTimeBw": {
+              "91": 0.0,
+              "116": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 114,
+      "name": "node110",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "132": 0.0,
+              "138": 0.0
+            },
+            "syncTimeBw": {
+              "113": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "132": 0.0,
+              "138": 0.0
+            },
+            "syncTimeBw": {
+              "113": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 115,
+      "name": "node113",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.6890000000000001,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "116": 0.0
+            },
+            "syncTimeBw": {
+              "110": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.131,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "116": 0.0
+            },
+            "syncTimeBw": {
+              "110": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 116,
+      "name": "node112",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.6959999999999997,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "113": 0.0
+            },
+            "syncTimeBw": {
+              "115": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.149,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 25475153.92,
+            "syncTimeFw": {
+              "113": 0.0
+            },
+            "syncTimeBw": {
+              "115": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 117,
+      "name": "node119",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.625,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "118": 0.0
+            },
+            "syncTimeBw": {
+              "91": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.481,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "118": 0.0
+            },
+            "syncTimeBw": {
+              "91": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 118,
+      "name": "node118",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.675,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "111": 0.0
+            },
+            "syncTimeBw": {
+              "117": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.941,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "111": 0.0
+            },
+            "syncTimeBw": {
+              "117": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 119,
+      "name": "node48",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "122": 0.0,
+              "124": 0.0
+            },
+            "syncTimeBw": {
+              "120": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "122": 0.0,
+              "124": 0.0
+            },
+            "syncTimeBw": {
+              "120": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 120,
+      "name": "node49",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.9050000000000002,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "119": 0.0
+            },
+            "syncTimeBw": {
+              "146": 0.0,
+              "140": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.333,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "119": 0.0
+            },
+            "syncTimeBw": {
+              "146": 0.0,
+              "140": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 121,
+      "name": "node46",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 9.065,
+            "parameterSize": 524288.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 1048576.0,
+            "syncTimeFw": {
+              "105": 0.0
+            },
+            "syncTimeBw": {
+              "122": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 11.636,
+            "parameterSize": 524288.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 188072591.36,
+            "syncTimeFw": {
+              "105": 0.0
+            },
+            "syncTimeBw": {
+              "122": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 122,
+      "name": "node47",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.67,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "121": 0.0
+            },
+            "syncTimeBw": {
+              "119": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.908,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187032207.36,
+            "syncTimeFw": {
+              "121": 0.0
+            },
+            "syncTimeBw": {
+              "119": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 123,
+      "name": "node44",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.9690000000000003,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "126": 0.0
+            },
+            "syncTimeBw": {
+              "124": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.427,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187548303.36,
+            "syncTimeFw": {
+              "126": 0.0
+            },
+            "syncTimeBw": {
+              "124": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 124,
+      "name": "node45",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.69,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "123": 0.0
+            },
+            "syncTimeBw": {
+              "119": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.928,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187032207.36,
+            "syncTimeFw": {
+              "123": 0.0
+            },
+            "syncTimeBw": {
+              "119": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "name": "node42",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.96,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "128": 0.0
+            },
+            "syncTimeBw": {
+              "126": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.532,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "128": 0.0
+            },
+            "syncTimeBw": {
+              "126": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 126,
+      "name": "node43",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.629,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "125": 0.0
+            },
+            "syncTimeBw": {
+              "123": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.0310000000000001,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "125": 0.0
+            },
+            "syncTimeBw": {
+              "123": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 127,
+      "name": "node40",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.53,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "99": 0.0
+            },
+            "syncTimeBw": {
+              "128": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.287,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "99": 0.0
+            },
+            "syncTimeBw": {
+              "128": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 128,
+      "name": "node41",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 11.084,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 1179648.0,
+            "syncTimeFw": {
+              "127": 0.0
+            },
+            "syncTimeBw": {
+              "125": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 13.687000000000001,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47935651.84,
+            "syncTimeFw": {
+              "127": 0.0
+            },
+            "syncTimeBw": {
+              "125": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 129,
+      "name": "node102",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.728,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "132": 0.0
+            },
+            "syncTimeBw": {
+              "130": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.211,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 25475153.92,
+            "syncTimeFw": {
+              "132": 0.0
+            },
+            "syncTimeBw": {
+              "130": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 130,
+      "name": "node103",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.718,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "129": 0.0
+            },
+            "syncTimeBw": {
+              "135": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.189,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "129": 0.0
+            },
+            "syncTimeBw": {
+              "135": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 131,
+      "name": "node100",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "53": 0.0,
+              "55": 0.0
+            },
+            "syncTimeBw": {
+              "132": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "53": 0.0,
+              "55": 0.0
+            },
+            "syncTimeBw": {
+              "132": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 132,
+      "name": "node101",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.526,
+            "parameterSize": 0.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "131": 0.0
+            },
+            "syncTimeBw": {
+              "129": 0.0,
+              "114": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.319,
+            "parameterSize": 0.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93512007.68,
+            "syncTimeFw": {
+              "131": 0.0
+            },
+            "syncTimeBw": {
+              "129": 0.0,
+              "114": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 133,
+      "name": "node106",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.712,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4096.0,
+            "syncTimeFw": {
+              "136": 0.0
+            },
+            "syncTimeBw": {
+              "134": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.177,
+            "parameterSize": 2048.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23382097.92,
+            "syncTimeFw": {
+              "136": 0.0
+            },
+            "syncTimeBw": {
+              "134": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 134,
+      "name": "node107",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.422,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "133": 0.0
+            },
+            "syncTimeBw": {
+              "137": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.721,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "133": 0.0
+            },
+            "syncTimeBw": {
+              "137": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 135,
+      "name": "node104",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.459,
+            "parameterSize": 0.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "130": 0.0
+            },
+            "syncTimeBw": {
+              "136": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.795,
+            "parameterSize": 0.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 23378001.92,
+            "syncTimeFw": {
+              "130": 0.0
+            },
+            "syncTimeBw": {
+              "136": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 136,
+      "name": "node105",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.427,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 25690112.0,
+            "memoryUsageB": 4718592.0,
+            "syncTimeFw": {
+              "135": 0.0
+            },
+            "syncTimeBw": {
+              "133": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.7330000000000005,
+            "parameterSize": 2359296.0,
+            "memoryUsageA": 2312110.08,
+            "memoryUsageB": 28096593.92,
+            "syncTimeFw": {
+              "135": 0.0
+            },
+            "syncTimeBw": {
+              "133": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 137,
+      "name": "node108",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.695,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 2097152.0,
+            "syncTimeFw": {
+              "134": 0.0
+            },
+            "syncTimeBw": {
+              "138": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.981,
+            "parameterSize": 1048576.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 95609159.68,
+            "syncTimeFw": {
+              "134": 0.0
+            },
+            "syncTimeBw": {
+              "138": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 138,
+      "name": "node109",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.631,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 102760448.0,
+            "memoryUsageB": 16384.0,
+            "syncTimeFw": {
+              "137": 0.0
+            },
+            "syncTimeBw": {
+              "114": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 2.4859999999999998,
+            "parameterSize": 8192.0,
+            "memoryUsageA": 9248440.32,
+            "memoryUsageB": 93528391.68,
+            "syncTimeFw": {
+              "137": 0.0
+            },
+            "syncTimeBw": {
+              "114": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 139,
+      "name": "node59",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.899,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "140": 0.0
+            },
+            "syncTimeBw": {
+              "159": 0.0,
+              "157": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.322,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "140": 0.0
+            },
+            "syncTimeBw": {
+              "159": 0.0,
+              "157": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 140,
+      "name": "node58",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "120": 0.0,
+              "143": 0.0
+            },
+            "syncTimeBw": {
+              "139": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "120": 0.0,
+              "143": 0.0
+            },
+            "syncTimeBw": {
+              "139": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 141,
+      "name": "node55",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.574,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "142": 0.0
+            },
+            "syncTimeBw": {
+              "144": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.9349999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "142": 0.0
+            },
+            "syncTimeBw": {
+              "144": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "name": "node54",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.959,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "147": 0.0
+            },
+            "syncTimeBw": {
+              "141": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.541,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "147": 0.0
+            },
+            "syncTimeBw": {
+              "141": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 143,
+      "name": "node57",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.721,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "144": 0.0
+            },
+            "syncTimeBw": {
+              "140": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.995,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187032207.36,
+            "syncTimeFw": {
+              "144": 0.0
+            },
+            "syncTimeBw": {
+              "140": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 144,
+      "name": "node56",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.79,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "141": 0.0
+            },
+            "syncTimeBw": {
+              "143": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.089,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187548303.36,
+            "syncTimeFw": {
+              "141": 0.0
+            },
+            "syncTimeBw": {
+              "143": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 145,
+      "name": "node51",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.97,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "146": 0.0
+            },
+            "syncTimeBw": {
+              "148": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.563,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "146": 0.0
+            },
+            "syncTimeBw": {
+              "148": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 146,
+      "name": "node50",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.925,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "120": 0.0
+            },
+            "syncTimeBw": {
+              "145": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.411,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47280291.84,
+            "syncTimeFw": {
+              "120": 0.0
+            },
+            "syncTimeBw": {
+              "145": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 147,
+      "name": "node53",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.827,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 1179648.0,
+            "syncTimeFw": {
+              "148": 0.0
+            },
+            "syncTimeBw": {
+              "142": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.413,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47935651.84,
+            "syncTimeFw": {
+              "148": 0.0
+            },
+            "syncTimeBw": {
+              "142": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 148,
+      "name": "node52",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.659,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "145": 0.0
+            },
+            "syncTimeBw": {
+              "147": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.084,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "145": 0.0
+            },
+            "syncTimeBw": {
+              "147": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 149,
+      "name": "node177",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.607,
+            "parameterSize": 8196000.0,
+            "memoryUsageA": 512000.0,
+            "memoryUsageB": 16392000.0,
+            "syncTimeFw": {
+              "150": 0.0
+            },
+            "syncTimeBw": {}
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.029,
+            "parameterSize": 8196000.0,
+            "memoryUsageA": 46080.0,
+            "memoryUsageB": 16857920.0,
+            "syncTimeFw": {
+              "150": 0.0
+            },
+            "syncTimeBw": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": 150,
+      "name": "node176",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1048576.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "151": 0.0,
+              "152": 0.0
+            },
+            "syncTimeBw": {
+              "149": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 94371.84,
+            "memoryUsageB": 954204.16,
+            "syncTimeFw": {
+              "151": 0.0,
+              "152": 0.0
+            },
+            "syncTimeBw": {
+              "149": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 151,
+      "name": "node175",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "152": 0.0
+            },
+            "syncTimeBw": {
+              "150": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 0.36,
+            "memoryUsageB": 3.64,
+            "syncTimeFw": {
+              "152": 0.0
+            },
+            "syncTimeBw": {
+              "150": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 152,
+      "name": "node174",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 1.0390000000000001,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1048576.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "153": 0.0
+            },
+            "syncTimeBw": {
+              "151": 0.0,
+              "150": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.675,
+            "parameterSize": 0.0,
+            "memoryUsageA": 94371.84,
+            "memoryUsageB": 954204.16,
+            "syncTimeFw": {
+              "153": 0.0
+            },
+            "syncTimeBw": {
+              "151": 0.0,
+              "150": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 153,
+      "name": "node173",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.702,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "154": 0.0
+            },
+            "syncTimeBw": {
+              "152": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.175,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "154": 0.0
+            },
+            "syncTimeBw": {
+              "152": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 154,
+      "name": "node172",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "155": 0.0,
+              "174": 0.0
+            },
+            "syncTimeBw": {
+              "153": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "155": 0.0,
+              "174": 0.0
+            },
+            "syncTimeBw": {
+              "153": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 155,
+      "name": "node171",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.962,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 32768.0,
+            "syncTimeFw": {
+              "156": 0.0
+            },
+            "syncTimeBw": {
+              "154": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.482,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46788771.84,
+            "syncTimeFw": {
+              "156": 0.0
+            },
+            "syncTimeBw": {
+              "154": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 156,
+      "name": "node170",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.192,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 8388608.0,
+            "syncTimeFw": {
+              "176": 0.0
+            },
+            "syncTimeBw": {
+              "155": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.525,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 55144611.84,
+            "syncTimeFw": {
+              "176": 0.0
+            },
+            "syncTimeBw": {
+              "155": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 157,
+      "name": "node68",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "139": 0.0,
+              "166": 0.0
+            },
+            "syncTimeBw": {
+              "158": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "139": 0.0,
+              "166": 0.0
+            },
+            "syncTimeBw": {
+              "158": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 158,
+      "name": "node69",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.002,
+            "parameterSize": 0.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "157": 0.0
+            },
+            "syncTimeBw": {
+              "7": 0.0,
+              "9": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.526,
+            "parameterSize": 0.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187024015.36,
+            "syncTimeFw": {
+              "157": 0.0
+            },
+            "syncTimeBw": {
+              "7": 0.0,
+              "9": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 159,
+      "name": "node60",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.7140000000000004,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "139": 0.0
+            },
+            "syncTimeBw": {
+              "160": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.99,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47280291.84,
+            "syncTimeFw": {
+              "139": 0.0
+            },
+            "syncTimeBw": {
+              "160": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 160,
+      "name": "node61",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.939,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "159": 0.0
+            },
+            "syncTimeBw": {
+              "161": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.5019999999999998,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "159": 0.0
+            },
+            "syncTimeBw": {
+              "161": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 161,
+      "name": "node62",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.574,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "160": 0.0
+            },
+            "syncTimeBw": {
+              "162": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.9319999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "160": 0.0
+            },
+            "syncTimeBw": {
+              "162": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 162,
+      "name": "node63",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.6100000000000003,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 1179648.0,
+            "syncTimeFw": {
+              "161": 0.0
+            },
+            "syncTimeBw": {
+              "163": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 4.979,
+            "parameterSize": 589824.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 47935651.84,
+            "syncTimeFw": {
+              "161": 0.0
+            },
+            "syncTimeBw": {
+              "163": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 163,
+      "name": "node64",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.922,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 2048.0,
+            "syncTimeFw": {
+              "162": 0.0
+            },
+            "syncTimeBw": {
+              "164": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.467,
+            "parameterSize": 1024.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46758051.84,
+            "syncTimeFw": {
+              "162": 0.0
+            },
+            "syncTimeBw": {
+              "164": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 164,
+      "name": "node65",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.567,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "163": 0.0
+            },
+            "syncTimeBw": {
+              "165": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.9209999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "163": 0.0
+            },
+            "syncTimeBw": {
+              "165": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 165,
+      "name": "node66",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.8,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 524288.0,
+            "syncTimeFw": {
+              "164": 0.0
+            },
+            "syncTimeBw": {
+              "166": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.1080000000000005,
+            "parameterSize": 262144.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187548303.36,
+            "syncTimeFw": {
+              "164": 0.0
+            },
+            "syncTimeBw": {
+              "166": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 166,
+      "name": "node67",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 2.674,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 205520896.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "165": 0.0
+            },
+            "syncTimeBw": {
+              "157": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 3.904,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 18496880.64,
+            "memoryUsageB": 187032207.36,
+            "syncTimeFw": {
+              "165": 0.0
+            },
+            "syncTimeBw": {
+              "157": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 167,
+      "name": "node164",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 5.799,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8388608.0,
+            "syncTimeFw": {
+              "174": 0.0
+            },
+            "syncTimeBw": {
+              "168": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 7.352,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 20077608.96,
+            "syncTimeFw": {
+              "174": 0.0
+            },
+            "syncTimeBw": {
+              "168": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 168,
+      "name": "node165",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.527,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "167": 0.0
+            },
+            "syncTimeBw": {
+              "169": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.906,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11697192.96,
+            "syncTimeFw": {
+              "167": 0.0
+            },
+            "syncTimeBw": {
+              "169": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 169,
+      "name": "node166",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.375,
+            "parameterSize": 0.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "168": 0.0
+            },
+            "syncTimeBw": {
+              "170": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.6609999999999999,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11689000.96,
+            "syncTimeFw": {
+              "168": 0.0
+            },
+            "syncTimeBw": {
+              "170": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 170,
+      "name": "node167",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 4.788,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 18874368.0,
+            "syncTimeFw": {
+              "169": 0.0
+            },
+            "syncTimeBw": {
+              "175": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 6.056,
+            "parameterSize": 9437184.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 30563368.96,
+            "syncTimeFw": {
+              "169": 0.0
+            },
+            "syncTimeBw": {
+              "175": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 171,
+      "name": "node160",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 3.751,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 8388608.0,
+            "syncTimeFw": {
+              "19": 0.0
+            },
+            "syncTimeBw": {
+              "172": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 5.089,
+            "parameterSize": 4194304.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 55144611.84,
+            "syncTimeFw": {
+              "19": 0.0
+            },
+            "syncTimeBw": {
+              "172": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 172,
+      "name": "node161",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.9650000000000001,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 32768.0,
+            "syncTimeFw": {
+              "171": 0.0
+            },
+            "syncTimeBw": {
+              "173": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.486,
+            "parameterSize": 16384.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46788771.84,
+            "syncTimeFw": {
+              "171": 0.0
+            },
+            "syncTimeBw": {
+              "173": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 173,
+      "name": "node162",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "13": 0.0,
+              "172": 0.0
+            },
+            "syncTimeBw": {
+              "174": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.0,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "13": 0.0,
+              "172": 0.0
+            },
+            "syncTimeBw": {
+              "174": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 174,
+      "name": "node163",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.854,
+            "parameterSize": 0.0,
+            "memoryUsageA": 51380224.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "173": 0.0
+            },
+            "syncTimeBw": {
+              "167": 0.0,
+              "154": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 1.33,
+            "parameterSize": 0.0,
+            "memoryUsageA": 4624220.16,
+            "memoryUsageB": 46756003.84,
+            "syncTimeFw": {
+              "173": 0.0
+            },
+            "syncTimeBw": {
+              "167": 0.0,
+              "154": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 175,
+      "name": "node168",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.55,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 8192.0,
+            "syncTimeFw": {
+              "170": 0.0
+            },
+            "syncTimeBw": {
+              "176": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.9490000000000001,
+            "parameterSize": 4096.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11697192.96,
+            "syncTimeFw": {
+              "170": 0.0
+            },
+            "syncTimeBw": {
+              "176": 0.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 176,
+      "name": "node169",
+      "TMPCs": {
+        "1": [
+          {
+            "id": "vanilla",
+            "timePerSample": 0.35500000000000004,
+            "parameterSize": 0.0,
+            "memoryUsageA": 12845056.0,
+            "memoryUsageB": 0.0,
+            "syncTimeFw": {
+              "175": 0.0
+            },
+            "syncTimeBw": {
+              "156": 0.0
+            }
+          },
+          {
+            "id": "activation recomp",
+            "timePerSample": 0.63,
+            "parameterSize": 0.0,
+            "memoryUsageA": 1156055.04,
+            "memoryUsageB": 11689000.96,
+            "syncTimeFw": {
+              "175": 0.0
+            },
+            "syncTimeBw": {
+              "156": 0.0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "sourceId": 0,
+      "destId": 9,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 1,
+      "destId": 0,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 2,
+      "destId": 1,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 3,
+      "destId": 2,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 4,
+      "destId": 3,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 5,
+      "destId": 4,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 6,
+      "destId": 5,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 7,
+      "destId": 6,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 8,
+      "destId": 25,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 8,
+      "destId": 21,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 9,
+      "destId": 8,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 10,
+      "destId": 86,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 10,
+      "destId": 12,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 11,
+      "destId": 14,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 12,
+      "destId": 11,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 13,
+      "destId": 173,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 13,
+      "destId": 16,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 14,
+      "destId": 13,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 15,
+      "destId": 18,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 16,
+      "destId": 15,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 17,
+      "destId": 20,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 18,
+      "destId": 17,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 19,
+      "destId": 171,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 20,
+      "destId": 19,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 21,
+      "destId": 22,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 22,
+      "destId": 56,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 23,
+      "destId": 24,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 24,
+      "destId": 29,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 25,
+      "destId": 26,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 26,
+      "destId": 23,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 27,
+      "destId": 28,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 28,
+      "destId": 56,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 29,
+      "destId": 30,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 30,
+      "destId": 27,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 31,
+      "destId": 44,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 32,
+      "destId": 31,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 33,
+      "destId": 34,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 34,
+      "destId": 14,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 35,
+      "destId": 38,
+      "communicationCost": 77070336.0
+    },
+    {
+      "sourceId": 36,
+      "destId": 33,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 37,
+      "destId": 40,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 38,
+      "destId": 37,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 39,
+      "destId": 42,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 39,
+      "destId": 48,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 40,
+      "destId": 39,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 41,
+      "destId": 32,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 42,
+      "destId": 41,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 43,
+      "destId": 46,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 44,
+      "destId": 43,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 45,
+      "destId": 50,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 46,
+      "destId": 45,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 47,
+      "destId": 50,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 48,
+      "destId": 47,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 49,
+      "destId": 52,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 49,
+      "destId": 77,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 50,
+      "destId": 49,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 51,
+      "destId": 79,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 52,
+      "destId": 51,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 53,
+      "destId": 131,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 54,
+      "destId": 53,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 55,
+      "destId": 131,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 55,
+      "destId": 58,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 56,
+      "destId": 55,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 57,
+      "destId": 60,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 58,
+      "destId": 57,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 59,
+      "destId": 62,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 60,
+      "destId": 59,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 61,
+      "destId": 54,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 62,
+      "destId": 61,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 63,
+      "destId": 90,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 64,
+      "destId": 63,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 65,
+      "destId": 72,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 66,
+      "destId": 65,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 67,
+      "destId": 66,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 67,
+      "destId": 90,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 68,
+      "destId": 67,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 69,
+      "destId": 64,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 70,
+      "destId": 69,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 71,
+      "destId": 70,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 72,
+      "destId": 71,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 73,
+      "destId": 74,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 74,
+      "destId": 104,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 75,
+      "destId": 76,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 76,
+      "destId": 77,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 77,
+      "destId": 78,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 78,
+      "destId": 73,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 78,
+      "destId": 106,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 79,
+      "destId": 80,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 80,
+      "destId": 81,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 81,
+      "destId": 82,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 82,
+      "destId": 75,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 83,
+      "destId": 36,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 84,
+      "destId": 85,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 85,
+      "destId": 83,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 86,
+      "destId": 87,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 87,
+      "destId": 84,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 88,
+      "destId": 89,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 89,
+      "destId": 68,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 90,
+      "destId": 10,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 91,
+      "destId": 92,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 92,
+      "destId": 68,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 92,
+      "destId": 93,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 93,
+      "destId": 94,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 94,
+      "destId": 95,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 95,
+      "destId": 96,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 96,
+      "destId": 97,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 97,
+      "destId": 98,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 98,
+      "destId": 88,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 99,
+      "destId": 127,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 100,
+      "destId": 99,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 101,
+      "destId": 108,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 102,
+      "destId": 101,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 103,
+      "destId": 102,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 104,
+      "destId": 103,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 105,
+      "destId": 100,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 105,
+      "destId": 121,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 106,
+      "destId": 105,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 107,
+      "destId": 106,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 108,
+      "destId": 107,
+      "communicationCost": 411041792.0
+    },
+    {
+      "sourceId": 109,
+      "destId": 112,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 110,
+      "destId": 109,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 111,
+      "destId": 118,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 112,
+      "destId": 111,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 113,
+      "destId": 91,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 113,
+      "destId": 116,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 114,
+      "destId": 113,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 115,
+      "destId": 110,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 116,
+      "destId": 115,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 117,
+      "destId": 91,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 118,
+      "destId": 117,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 119,
+      "destId": 120,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 120,
+      "destId": 146,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 120,
+      "destId": 140,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 121,
+      "destId": 122,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 122,
+      "destId": 119,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 123,
+      "destId": 124,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 124,
+      "destId": 119,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 125,
+      "destId": 126,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 126,
+      "destId": 123,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 127,
+      "destId": 128,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 128,
+      "destId": 125,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 129,
+      "destId": 130,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 130,
+      "destId": 135,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 131,
+      "destId": 132,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 132,
+      "destId": 129,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 132,
+      "destId": 114,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 133,
+      "destId": 134,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 134,
+      "destId": 137,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 135,
+      "destId": 136,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 136,
+      "destId": 133,
+      "communicationCost": 25690112.0
+    },
+    {
+      "sourceId": 137,
+      "destId": 138,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 138,
+      "destId": 114,
+      "communicationCost": 102760448.0
+    },
+    {
+      "sourceId": 139,
+      "destId": 159,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 139,
+      "destId": 157,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 140,
+      "destId": 139,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 141,
+      "destId": 144,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 142,
+      "destId": 141,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 143,
+      "destId": 140,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 144,
+      "destId": 143,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 145,
+      "destId": 148,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 146,
+      "destId": 145,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 147,
+      "destId": 142,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 148,
+      "destId": 147,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 150,
+      "destId": 149,
+      "communicationCost": 1048576.0
+    },
+    {
+      "sourceId": 151,
+      "destId": 150,
+      "communicationCost": 4.0
+    },
+    {
+      "sourceId": 152,
+      "destId": 151,
+      "communicationCost": 1048576.0
+    },
+    {
+      "sourceId": 152,
+      "destId": 150,
+      "communicationCost": 1048576.0
+    },
+    {
+      "sourceId": 153,
+      "destId": 152,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 154,
+      "destId": 153,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 155,
+      "destId": 154,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 156,
+      "destId": 155,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 157,
+      "destId": 158,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 158,
+      "destId": 7,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 158,
+      "destId": 9,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 159,
+      "destId": 160,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 160,
+      "destId": 161,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 161,
+      "destId": 162,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 162,
+      "destId": 163,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 163,
+      "destId": 164,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 164,
+      "destId": 165,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 165,
+      "destId": 166,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 166,
+      "destId": 157,
+      "communicationCost": 205520896.0
+    },
+    {
+      "sourceId": 167,
+      "destId": 168,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 168,
+      "destId": 169,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 169,
+      "destId": 170,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 170,
+      "destId": 175,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 171,
+      "destId": 172,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 172,
+      "destId": 173,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 173,
+      "destId": 174,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 174,
+      "destId": 167,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 174,
+      "destId": 154,
+      "communicationCost": 51380224.0
+    },
+    {
+      "sourceId": 175,
+      "destId": 176,
+      "communicationCost": 12845056.0
+    },
+    {
+      "sourceId": 176,
+      "destId": 156,
+      "communicationCost": 12845056.0
+    }
+  ]
+}
