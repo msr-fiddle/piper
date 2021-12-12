@@ -219,17 +219,13 @@ struct Instance {
     double maxMemoryPerDevice;
     int maxDevices;
     double bandwidth; // in bytes per second
+    int mbsInBatch;
     vector<Node> nodes;
     vector<Edge> edges;
 
     // filled with renumber()
     unordered_map<int,int> newNumber;
     vector<int> oldNumber;
-
-    // if absent from input, by default defined as equal to maxDevices
-    int maxBatchSize;
-
-    double dataParallelResyncPeriod; // default 1.0. data-parallel resync done every X possible times
 
     void linearize();
     void checkInputCorrectness() const;
@@ -248,20 +244,9 @@ void from_json (const json &j, Instance &ii) {
     j.at("maxMemoryPerDevice").get_to(ii.maxMemoryPerDevice);
     j.at("maxDevices").get_to(ii.maxDevices);
     j.at("bandwidth").get_to(ii.bandwidth);
+    j.at("mbsInBatch").get_to(ii.mbsInBatch);
     j.at("nodes").get_to(ii.nodes);
     j.at("edges").get_to(ii.edges);
-
-    if (j.count("maxBatchSize")) {
-        j.at("maxBatchSize").get_to(ii.maxBatchSize);
-    } else {
-        ii.maxBatchSize = ii.maxDevices;
-    }
-
-    if (j.count("dataParallelResyncPeriod")) {
-        j.at("dataParallelResyncPeriod").get_to(ii.dataParallelResyncPeriod);
-    } else {
-        ii.dataParallelResyncPeriod = 1.0;
-    }
 
     ii.checkInputCorrectness();
     ii.renumber();
@@ -284,6 +269,9 @@ void Instance::checkInputCorrectness() const {
     }
     if (maxMemoryPerDevice < 1e-9) {
         fail("wrong maxMemoryPerDevice");
+    }
+    if (mbsInBatch < 1) {
+        fail("wrong mbsInBatch");
     }
     if (nodes.empty()) {
         fail("no nodes in input");
@@ -387,7 +375,6 @@ void Instance::checkInputCorrectness() const {
         }
 
     }
-    // TODO: also sanity-check maxBatchSize and dataParallelResyncPeriod
 }
 
 
@@ -536,10 +523,10 @@ void Instance::insertTransformerLayer () {
         }
     }
 
-    // ideally, here we should also:
+    // TODO: ideally, here we should also:
     // for each other edge a->v, add a->nu
     // for each other edge v->b, add nu->b
-    // (in the BERT model input, the former are irrelevant and latter are absent)
+    // (but, in the BERT model input, the former are irrelevant and latter are absent)
 
     checkInputCorrectness();
 }
@@ -655,6 +642,7 @@ void to_json (json &j, const Result &r) {
 
 struct Graph {
     const Instance &ins; // already renumbered (nodes 0,1,2,...)
+    const int boundOnS; // set as min(mbsInBatch, maxDevices)
 
     vector<vector<pair<int,double>>> incomingEdges; // v -> vector of {u,c(u,v)}
     vector<vector<pair<int,double>>> outgoingEdges; // v -> vector of {w,c(v,w)}
@@ -663,7 +651,8 @@ struct Graph {
     // ideals, represented as indicator vectors
     unordered_map<vector<bool>,int> idealToId; // maps ideal to its ID
     vector<vector<bool>> ideals; // maps ID to ideal
-    
+    vector<int> idealsSortedBySize; // IDs of ideals, sorted by size
+
     // NOTE: throughout the code, we are actually dealing with DOWNSETS, not ideals. should Ctrl+Replace
 
     // pairs of ideals (that induce contiguous sets)
@@ -712,6 +701,7 @@ struct Graph {
 
 Graph::Graph (const Instance &_ins) :
     ins(_ins),
+    boundOnS(min(_ins.mbsInBatch,_ins.maxDevices)),
     numberOfIdealPairs(0),
     reconstructionModeForGetAllTPSsForIdealPair(false),
     reconstructionModeForSolveKnapsack(false) {
@@ -751,6 +741,17 @@ void Graph::generateIdeals () {
     if (ideals.size() > IDEALS_LIMIT) {
         fail("too many ideals (current limit set at " + to_string(IDEALS_LIMIT) + "); this isn't going to work...");
     }
+
+    // prepare idealsSortedBySize
+    vector<pair<int,int>> sorter; // {<size,ideal id>}
+    for (int i = 0; i < ideals.size(); ++i) {
+        sorter.emplace_back(count(ideals[i].begin(), ideals[i].end(), true), i);
+    }
+    sort(sorter.begin(), sorter.end());
+    for (const auto &it : sorter) {
+        idealsSortedBySize.push_back(it.second);
+    }
+    assert(idealsSortedBySize[0] == 0);
 }
 
 
@@ -836,9 +837,10 @@ vector<bool> Graph::getContiguousSet (int id, int subId) const {
 }
 
 
-// returns the time taken PER d SAMPLES! (so this should be still divided by d once)
+// returns the cost per sample (microbatch), in bytes
+// (so this should be still divided by the bandwidth)
 double Graph::getDataParallelResyncCost (double parameterSize, int d) const {
-    return 4 * (d-1) * parameterSize / d / ins.dataParallelResyncPeriod;
+    return 4 * (d-1) * parameterSize / d / ins.mbsInBatch;
     // the factor 4 is following the implementation of the PipeDream planner
     // (modeling a distributed parameter server implementation of AllReduce)
 }
@@ -850,12 +852,12 @@ Result Graph::runDP () {
     // note: both are AT MOST rather than EQUAL as in the paper
     dp.assign(ideals.size(), vector<vector<double>>(
               ins.maxDevices+1, vector<double>(
-              ins.maxBatchSize+1, INFTY)));
+              boundOnS+1, INFTY)));
 
     // case of the empty set (ideal with ID 0)
     // we initialize all dp[0][*][*] = 0 so that it is monotone wrt k and s
     for (int k = 0; k <= ins.maxDevices; ++k) {
-        for (int s = 0; s <= ins.maxBatchSize; ++s) {
+        for (int s = 0; s <= boundOnS; ++s) {
             dp[0][k][s] = 0;
         }
     }
@@ -870,7 +872,8 @@ Result Graph::runDP () {
 
     // here we go!
     dbg << "running DP..." << endl;
-    for (int id = 1; id < ideals.size(); ++id) {
+    for (int id : idealsSortedBySize) {
+        if (id == 0) continue;
         // we want to fill dp[id][*][*] (already initialized to INFTY).
         // we will loop over every subideal subId (their list is already
         // precomputed in subIdeals[id] for convenience) and account for its
@@ -885,7 +888,7 @@ Result Graph::runDP () {
 
             startTime = clock();
             for (int t = 1; t <= ins.maxDevices; ++t) if (!TPS[t].empty()) {
-                for (int d = 1; d*t <= ins.maxDevices; ++d) {
+                for (int d = 1; d*t <= ins.maxDevices; ++d) if (ins.mbsInBatch % d == 0) {
                     for (int k = d*t; k <= ins.maxDevices; ++k) {
                         // id/subId on t*d devices, subId on k-t*d devices
 
@@ -896,7 +899,7 @@ Result Graph::runDP () {
                             // straightforward implementation
 
                             #pragma GCC unroll 16
-                            for (int s = d; s <= ins.maxBatchSize; ++s) {
+                            for (int s = d; s <= boundOnS; ++s) {
                                 minify(dp[id][k][s], max(dp[subId][k-t*d][s-d], TPS[t][d][s]));
                             }
 
@@ -912,7 +915,7 @@ Result Graph::runDP () {
                             // TPS[t][d][s] is non-decreasing wrt s
                             // 1. find (using binary search) max index u >= 0 such that:
                             //    - f = dpDrops[subId][k-t*d][u] exists
-                            //    - f+d <= ins.maxBatchSize
+                            //    - f+d <= boundOnS
                             //    - dp[subId][k-t*d][f] > TPS[t][d][f+d]
                             // 2. do minify from 0 to u incl. (use just dp, not TPS)
                             // 3. also do minify for u+1 if it is valid (two first points above) (use both dp and TPS here)
@@ -920,7 +923,7 @@ Result Graph::runDP () {
                             while (uf <= ut) {
                                 int mid = (uf + ut) / 2;
                                 int f = dpDrops[subId][k-t*d][mid];
-                                if (f+d <= ins.maxBatchSize && dp[subId][k-t*d][f] > TPS[t][d][f+d]) {
+                                if (f+d <= boundOnS && dp[subId][k-t*d][f] > TPS[t][d][f+d]) {
                                     u = mid;
                                     uf = mid+1;
                                 } else {
@@ -934,7 +937,7 @@ Result Graph::runDP () {
                             }
                             if (u+1 < dpDrops[subId][k-t*d].size()) {
                                 int f = dpDrops[subId][k-t*d][u+1];
-                                if (f+d <= ins.maxBatchSize) {
+                                if (f+d <= boundOnS) {
                                     assert(dp[subId][k-t*d][f] <= TPS[t][d][f+d]);
                                     minify(dp[id][k][f+d], TPS[t][d][f+d]);
                                 }
@@ -951,7 +954,7 @@ Result Graph::runDP () {
         // (only really needed if FASTER_DP_IMPLEMENTATION)
         for (int k = 0; k <= ins.maxDevices; ++k) {
             //assert(dpDrops[id][k] == vector<int>(1,0));
-            for (int s = 0; s <= ins.maxBatchSize; ++s) {
+            for (int s = 0; s <= boundOnS; ++s) {
                 if (k > 0) {
                     minify(dp[id][k][s], dp[id][k-1][s]);
                 }
@@ -975,13 +978,13 @@ Result Graph::runDP () {
     idOfFullSet = idealToId.at(vector<bool>(ins.nodes.size(), true));
 
     double finalTPS = INFTY;
-    int devicesUsed = -1, batchSizeUsed = -1;
+    int devicesUsed = -1, sUsed = -1;
     for (int k = 0; k <= ins.maxDevices; ++k) {
-        for (int s = 1; s <= ins.maxBatchSize; ++s) {
+        for (int s = 1; s <= boundOnS; ++s) {
             if (dp[idOfFullSet][k][s] + 1e-9 < finalTPS) {
                 finalTPS = dp[idOfFullSet][k][s];
                 devicesUsed = k;
-                batchSizeUsed = s;
+                sUsed = s;
             }
         }
     }
@@ -990,29 +993,34 @@ Result Graph::runDP () {
         return Result(); // empty result
     }
     dbg << "max load = " << finalTPS << " using " << devicesUsed
-        << " out of " << ins.maxDevices << " devices, and using "
-        << batchSizeUsed << " batch size (max permitted = " 
-        << ins.maxBatchSize << ")" << endl;
+        << " out of " << ins.maxDevices << " devices, and using sum-of-dp-degrees "
+        << sUsed << " (batch size = " 
+        << ins.mbsInBatch << ")" << endl;
     // note: the reported number of devices and batch size might possibly be overshot
-    // (since we initialized all dp[0][*][*] = 0 at the beginning)
-    // (although the strict inequality in the comparison above should prevent this,
-    //  as this way we take the minimal (k,s) that attains this TPS)
+    // (since we initialized all dp[0][*][*] = 0 at the beginning,
+    //  and also since, if FASTER_DP_IMPLEMENTATION,
+    //  we do minify(dp[id][k][s], dp[id][k-1][s]) and minify(dp[id][k][s], dp[id][k][s-1]))
+    // however, the strict inequality in the comparison above should prevent this,
+    // as this way we take the minimal (k,s) that attains this TPS
 
     // for debug/experiments only
     vector<int> transformerIds = ins.getTransformerIds();
 
     // now we reconstruct the solution
     Result result;
-    int curId = idOfFullSet, curK = devicesUsed, curS = batchSizeUsed;
+    int curId = idOfFullSet, curK = devicesUsed, curS = sUsed;
     while (curId != 0) { // curId is not empty set
+        assert(curK > 0);
+        assert(curS > 0);
         // how does dp[curId][curK][curS] arise?
+        bool found = false;
         for (int subId : subIdeals[curId]) {
-            bool found = false;
             const vector<vector<vector<double>>> TPS = getAllTPSsForIdealPair(curId, subId);
             // possible optimization: could only ask for s = curS
 
             for (int t = 1; t <= curK; ++t) if (!TPS[t].empty()) {
                 for (int d = 1; t*d <= curK && d <= curS; ++d) {
+                    if (ins.mbsInBatch % d != 0) continue; // not really necessary
                     // curId\subId on t*d devices, subId on curK-t*d devices
                     if (1e-9 > abs(dp[curId][curK][curS] - max(dp[subId][curK-t*d][curS-d], TPS[t][d][curS]))) {
                         // found the next stage
@@ -1052,6 +1060,12 @@ Result Graph::runDP () {
             }
             if (found) break;
         }
+        if (!found) {
+            fail("didn't find any reconstruction step to make?");
+        }
+    }
+    if (curK > 0 || curS > 0) {
+        fail("k or s didn't fall to 0 by the end of reconstruction?");
     }
 
     const double verificationTPS = getTPSForResult(result);
@@ -1099,7 +1113,7 @@ vector<vector<vector<double>>> Graph::getAllTPSsForIdealPair (int id, int subId)
         }
 
         // initialize the result vector
-        result[t].assign(ins.maxDevices/t + 1, vector<double>(ins.maxBatchSize+1, INFTY));
+        result[t].assign(ins.maxDevices/t + 1, vector<double>(boundOnS+1, INFTY));
 
         vector<const vector<TMPC>*> TMPCs; // TMPCs[i] = TMPCs for node subgraph[i] on t devices
         vector<vector<double>> TMPCEdgeCommCosts;
@@ -1143,9 +1157,7 @@ vector<vector<vector<double>>> Graph::getAllTPSsForIdealPair (int id, int subId)
         // TMPCs and TMPCEdgeCommCosts prepared
 
         // d = degree of data parallelism
-        for (int d = 1; d*t <= ins.maxDevices; ++d) {
-            // interesting fact: this loop will execute O(K log K) times (K = ins.maxDevices)
-            // (indeed, O(K log P) times, where P is the number of t having some TMPCs)
+        for (int d = 1; d*t <= ins.maxDevices; ++d) if (ins.mbsInBatch % d == 0) {
 
             if (d > 1 && !DATA_PARALLELISM_ALLOWED) {
                 break;
@@ -1170,16 +1182,16 @@ vector<vector<vector<double>>> Graph::getAllTPSsForIdealPair (int id, int subId)
                     const TMPC &tmpc = (*TMPCs[i])[l];
                     TMPCMemoryUsageA.back().push_back(tmpc.memoryUsageA);
                     TMPCMemoryUsageB.back().push_back(tmpc.memoryUsageB);
-                    // add up all the contributions of node v to the TPS (we divide by d at the end):
+                    // add up all the contributions of node v to the TPS:
                     const double communicationInBytes = 
                     // 1. edge-related communication
-                        TMPCEdgeCommCosts[i][l]
+                        TMPCEdgeCommCosts[i][l] / d
                         +
                     // 2. data parallelism resync communication
                         getDataParallelResyncCost(tmpc.parameterSize, d);
                     // 3. compute
-                    const double compute = tmpc.timePerSample;
-                    const double totalTPSContribution = (communicationInBytes / ins.bandwidth + compute) / d;
+                    const double compute = tmpc.timePerSample / d;
+                    const double totalTPSContribution = communicationInBytes / ins.bandwidth + compute;
                     TMPCTotalTPSContribution.back().push_back(totalTPSContribution);
 
                     if ((!ACTIVATION_RECOMPUTATION_ALLOWED && tmpc.id == "activation recomp")
@@ -1196,11 +1208,11 @@ vector<vector<vector<double>>> Graph::getAllTPSsForIdealPair (int id, int subId)
             vector<double> knapsackResults = solveKnapsack(TMPCTotalTPSContribution,
                                                            TMPCMemoryUsageA,
                                                            TMPCMemoryUsageB,
-                                                           ins.maxBatchSize / d + 1);
+                                                           boundOnS / d + 1);
             // knapsackResults[y] = best TPS (over all choices of TMPC-per-node)
             // when t-tensor- and d-data-parallel partitioning
             // id\subId (across t*d devices), with sum-of-dp-degrees <= d*y
-            for (int s = 0; s <= ins.maxBatchSize; ++s) {
+            for (int s = 0; s <= boundOnS; ++s) {
                 result[t][d][s] = knapsackResults[ceildiv(s, d)];
             }
 
@@ -1224,7 +1236,7 @@ vector<vector<vector<double>>> Graph::getAllTPSsForIdealPair (int id, int subId)
                         solveKnapsack(TMPCTotalTPSContribution,
                                       TMPCMemoryUsageA,
                                       TMPCMemoryUsageB,
-                                      ins.maxBatchSize / d + 1);
+                                      boundOnS / d + 1);
                         // now we need to translate this to reconstructionRS.TMPCids
                         reconstructionRS.TMPCids.clear();
                         for (int i = 0; i < subgraph.size(); ++i) {
@@ -1437,7 +1449,7 @@ vector<double> Graph::solveKnapsack (const vector<vector<double>>& TMPCTPS,
         ++executionCount;
         constexpr int y = 2;
         assert(y <= maxY);
-        if (rand() % 32 == 0) {
+        if (rand() % 3 == 0) {
             dbg << "executionCount = " << executionCount << endl;
             knapsackFile << setprecision(15) << fixed << ins.maxMemoryPerDevice << endl;
             knapsackFile << TMPCTPS.size() << endl;
@@ -1496,7 +1508,7 @@ double Graph::getTPSForResult (const Result &r) const {
     // and that every node belongs to exactly one subgraph
     // and that we don't use too many devices
     vector<int> stageOfNode(ins.nodes.size(), -1);
-    int devicesUsed = 0, batchSize = 0;
+    int devicesUsed = 0, sumOfDpDegrees = 0;
     for (int i = 0; i < r.stages.size(); ++i) {
         for (int v : r.stages[i].nodes) {
             if (stageOfNode[v] != -1) {
@@ -1507,11 +1519,14 @@ double Graph::getTPSForResult (const Result &r) const {
         if (r.stages[i].dataParallelDegree < 1 || r.stages[i].dataParallelDegree > ins.maxDevices) {
             fail("wrong data-parallel degree");
         }
+        if (ins.mbsInBatch % r.stages[i].dataParallelDegree != 0) {
+            fail("data-parallel degree must divide the number of microbatches in a batch");
+        }
         if (r.stages[i].tensorParallelDegree < 1 || r.stages[i].tensorParallelDegree > ins.maxDevices) {
             fail("wrong tensor-parallel degree");
         }
         devicesUsed += r.stages[i].dataParallelDegree * r.stages[i].tensorParallelDegree;
-        batchSize += r.stages[i].dataParallelDegree;
+        sumOfDpDegrees += r.stages[i].dataParallelDegree;
     }
     for (const Edge &e : ins.edges) {
         if (stageOfNode[e.sourceId] > stageOfNode[e.destId]) {
@@ -1523,8 +1538,8 @@ double Graph::getTPSForResult (const Result &r) const {
             fail("node does not appear in any subgraph");
         }
     }
-    if (batchSize > ins.maxBatchSize) {
-        fail("batch size (sum of data-parallel degrees) too large");
+    if (sumOfDpDegrees > ins.mbsInBatch) {
+        fail("sum of data-parallel degrees too large");
     }
     if (devicesUsed > ins.maxDevices) { 
         fail("too many devices used");
@@ -1539,7 +1554,7 @@ double Graph::getTPSForResult (const Result &r) const {
     // now we want to compute the TPS,
     // and also verify it's not OOM
     double finalTPS = 0.0;
-    int suffixSumOfDataParallelDegrees = batchSize;
+    int suffixSumOfDataParallelDegrees = sumOfDpDegrees;
     for (int i = 0; i < r.stages.size(); ++i) {
         const ResultStage &rs = r.stages[i];
 
@@ -1607,17 +1622,17 @@ double Graph::getTPSForResult (const Result &r) const {
             return INFTY;
         }
 
-        const double communicationInBytes = edgeCommunicationInBytes + dataParallelCommunicationInBytes;
+        const double communicationInBytes = edgeCommunicationInBytes / d + dataParallelCommunicationInBytes;
 
         if (DEBUG_DATA_PARALLEL_COSTS) {
-            const double dataParallelCost = dataParallelCommunicationInBytes / ins.bandwidth / d;
+            const double dataParallelCost = dataParallelCommunicationInBytes / ins.bandwidth;
             const double theRestxxxxxxxxx = (edgeCommunicationInBytes / ins.bandwidth + compute) / d;
             cerr << setprecision(10) << fixed;
             DBG(dataParallelCost);
             DBG(theRestxxxxxxxxx);
         }
 
-        const double stageTPS = (communicationInBytes / ins.bandwidth + compute) / d;
+        const double stageTPS = communicationInBytes / ins.bandwidth + compute / d;
 
         finalTPS = max(finalTPS, stageTPS);
     }
@@ -1693,37 +1708,39 @@ Result runPipeDream2BWPlanner (const Instance &ins,
             append(result.stages.back().nodes, finalNodes);
             result.debugInfo = (putNonTransformerNodesSeparately ? "1" : "0");
 
-            for (int d = 1; stages*d <= min(ins.maxDevices, ins.maxBatchSize); d ++) {
-                for (int t = 1; stages*d*t <= ins.maxDevices; t ++) {
-                    if (t > 1) {
-                        if (!useTensorParallelism) {
-                            break;
-                        }
-                        // should check if all nodes support t-degree tensor parallelism
-                        // we'll just check one node since in our inputs they all support some t or not
-                        if (!ins.nodes[0].TMPCs.count(t)) {
-                            continue;
-                        }
-                    }
-
-                    for (ResultStage &rs : result.stages) {
-                        rs.dataParallelDegree = d;
-                        rs.tensorParallelDegree = t;
-                    }
-
-                    // PipeDream-2BW uses activation recomputation everywhere or nowhere
-                    for (bool activationRecomputationEverywhere : {false, true}) {
-                        for (ResultStage &rs : result.stages) {
-                            for (int v : rs.nodes) {
-                                rs.TMPCids[v] = activationRecomputationEverywhere ? "activation recomp" : "vanilla";
+            for (int d = 1; stages*d <= min(ins.maxDevices, ins.mbsInBatch); d ++) {
+                if (ins.mbsInBatch % d == 0) {
+                    for (int t = 1; stages*d*t <= ins.maxDevices; t ++) {
+                        if (t > 1) {
+                            if (!useTensorParallelism) {
+                                break;
+                            }
+                            // should check if all nodes support t-degree tensor parallelism
+                            // we'll just check one node since in our inputs they all support some t or not
+                            if (!ins.nodes[0].TMPCs.count(t)) {
+                                continue;
                             }
                         }
 
-                        // result is built. try it
-                        const double TPS = g.getTPSForResult(result);
-                        if (TPS < bestTPS) {
-                            bestTPS = TPS;
-                            bestResult = result;
+                        for (ResultStage &rs : result.stages) {
+                            rs.dataParallelDegree = d;
+                            rs.tensorParallelDegree = t;
+                        }
+
+                        // PipeDream-2BW uses activation recomputation everywhere or nowhere
+                        for (bool activationRecomputationEverywhere : {false, true}) {
+                            for (ResultStage &rs : result.stages) {
+                                for (int v : rs.nodes) {
+                                    rs.TMPCids[v] = activationRecomputationEverywhere ? "activation recomp" : "vanilla";
+                                }
+                            }
+
+                            // result is built. try it
+                            const double TPS = g.getTPSForResult(result);
+                            if (TPS < bestTPS) {
+                                bestTPS = TPS;
+                                bestResult = result;
+                            }
                         }
                     }
                 }
@@ -1782,37 +1799,39 @@ Result runPipeDream2BWPlannerNonTransformer (const Instance &ins,
         }
         assert(nextStageIndex == nodeIds.size());
 
-        for (int d = 1; stages*d <= min(ins.maxDevices, ins.maxBatchSize); d ++) {
-            for (int t = 1; stages*d*t <= ins.maxDevices; t ++) {
-                if (t > 1) {
-                    if (!useTensorParallelism) {
-                        break;
-                    }
-                    // should check if all nodes support t-degree tensor parallelism
-                    // we'll just check one node since in our inputs they all support some t or not
-                    if (!ins.nodes[0].TMPCs.count(t)) {
-                        continue;
-                    }
-                }
-
-                for (ResultStage &rs : result.stages) {
-                    rs.dataParallelDegree = d;
-                    rs.tensorParallelDegree = t;
-                }
-
-                // PipeDream-2BW uses activation recomputation everywhere or nowhere
-                for (bool activationRecomputationEverywhere : {false, true}) {
-                    for (ResultStage &rs : result.stages) {
-                        for (int v : rs.nodes) {
-                            rs.TMPCids[v] = activationRecomputationEverywhere ? "activation recomp" : "vanilla";
+        for (int d = 1; stages*d <= min(ins.maxDevices, ins.mbsInBatch); d ++) {
+            if (ins.mbsInBatch % d == 0) {
+                for (int t = 1; stages*d*t <= ins.maxDevices; t ++) {
+                    if (t > 1) {
+                        if (!useTensorParallelism) {
+                            break;
+                        }
+                        // should check if all nodes support t-degree tensor parallelism
+                        // we'll just check one node since in our inputs they all support some t or not
+                        if (!ins.nodes[0].TMPCs.count(t)) {
+                            continue;
                         }
                     }
 
-                    // result is built. try it
-                    const double TPS = g.getTPSForResult(result);
-                    if (TPS < bestTPS) {
-                        bestTPS = TPS;
-                        bestResult = result;
+                    for (ResultStage &rs : result.stages) {
+                        rs.dataParallelDegree = d;
+                        rs.tensorParallelDegree = t;
+                    }
+
+                    // PipeDream-2BW uses activation recomputation everywhere or nowhere
+                    for (bool activationRecomputationEverywhere : {false, true}) {
+                        for (ResultStage &rs : result.stages) {
+                            for (int v : rs.nodes) {
+                                rs.TMPCids[v] = activationRecomputationEverywhere ? "activation recomp" : "vanilla";
+                            }
+                        }
+
+                        // result is built. try it
+                        const double TPS = g.getTPSForResult(result);
+                        if (TPS < bestTPS) {
+                            bestTPS = TPS;
+                            bestResult = result;
+                        }
                     }
                 }
             }
@@ -1848,8 +1867,7 @@ double buildEquiPartitionResult (Instance &ins,
                                  int t,
                                  int stages,
                                  bool putNonTransformerNodesSeparately,
-                                 bool activationRecomputationEverywhere,
-                                 double dataParallelResyncPeriod) {
+                                 bool activationRecomputationEverywhere) {
     vector<int> transformers = ins.getTransformerIds();
     vector<int> initialNodes, finalNodes; // before and after transformers, respectively
 
@@ -1907,9 +1925,10 @@ double buildEquiPartitionResult (Instance &ins,
     result.debugInfo = (putNonTransformerNodesSeparately ? "1" : "0");
 
     assert(d >= 1);
-    assert(stages*d <= min(ins.maxDevices, ins.maxBatchSize));
+    assert(stages*d <= min(ins.maxDevices, ins.mbsInBatch));
     assert(t >= 1);
     assert(stages*d*t <= ins.maxDevices);
+    assert(ins.mbsInBatch % d == 0);
 
     // should check if all nodes support t-degree tensor parallelism
     // we'll just check one node since in our inputs they all support some t or not
@@ -1926,13 +1945,8 @@ double buildEquiPartitionResult (Instance &ins,
         }
     }
 
-    const double backupDataParallelResyncPeriod = ins.dataParallelResyncPeriod;
-    ins.dataParallelResyncPeriod = dataParallelResyncPeriod;
-
     // result is built. try it
     const double TPS = g.getTPSForResult(result);
-
-    ins.dataParallelResyncPeriod = backupDataParallelResyncPeriod;
 
     // dbg output
     dbg << "TPS = " << TPS << endl;
@@ -1997,7 +2011,7 @@ void single () {
     Instance ins = readBERTA100(32);
     ins.maxMemoryPerDevice = 8.0 * (1 << 30);
     ins.maxDevices = 512;
-    ins.maxBatchSize = ins.maxDevices;
+    ins.mbsInBatch = 1920;
     ins.bandwidth = 25.0 * (1LL << 30);
     
     runOurAlgoOnInstances({ins});
@@ -2007,15 +2021,15 @@ void single () {
 void plots () {
     for (double memGB : {1,2,8,80}) {
         for (int bertSize : {32}) {
-            for (int maxBatchSize : {512}) {
+            for (int batchSize : {1920}) {
                 stringstream ss;
-                ss << "bert" << bertSize << "-" << memGB << "GB-bs" << maxBatchSize << ".csv";
+                ss << "bert" << bertSize << "-" << memGB << "GB-bs" << batchSize << ".csv";
                 ofstream of(ss.str());
                 of << ",Number of devices,color,\\sf{type},\\sf{throughput}\n";
                 int cnt = 0;
 
                 dbg << "=================================================" << endl;
-                dbg << "bertSize = " << bertSize << ", max batch size = " << maxBatchSize << endl;
+                dbg << "bertSize = " << bertSize << ", batch size = " << batchSize << endl;
                 dbg << "=================================================" << endl;
 
                 for (int k : {8,32,64,128,512,1024,2048}) {
@@ -2028,9 +2042,9 @@ void plots () {
                     ins.maxMemoryPerDevice = (1 << 30) * 1.0 * memGB;
                     ins.maxDevices = k;
                     ins.bandwidth = 25.0 * (1 << 30);
-                    ins.maxBatchSize = min(ins.maxDevices, maxBatchSize);
+                    ins.mbsInBatch = batchSize;
 
-                    if (ins.getMaxTensorParallelDegree() * ins.maxBatchSize < k) {
+                    if (ins.getMaxTensorParallelDegree() * batchSize < k) {
                         dbg << "skipping device count " << k << " since they cannot all be used" << endl;
                         continue;
                     }
@@ -2091,27 +2105,30 @@ void correlationExperiment () {
     Instance ins = readBERTA100(32);
     ins.maxDevices = 64;
     ins.bandwidth = (300.0 + 25.0)/2 * (1 << 30);
-    ins.maxBatchSize = 64;
     vector<double> results;
-    results.push_back(buildEquiPartitionResult(ins, 32, 1, 2, false, true, 4));
-    results.push_back(buildEquiPartitionResult(ins, 16, 1, 4, false, true, 8));
-    results.push_back(buildEquiPartitionResult(ins, 8, 1, 8, false, true, 16));
-    results.push_back(buildEquiPartitionResult(ins, 4, 1, 16, false, true, 32));
-    results.push_back(buildEquiPartitionResult(ins, 2, 1, 32, false, true, 64));
-    results.push_back(buildEquiPartitionResult(ins, 32, 1, 2, false, true, 16));
-    results.push_back(buildEquiPartitionResult(ins, 16, 1, 4, false, true, 32));
-    results.push_back(buildEquiPartitionResult(ins, 8, 1, 8, false, true, 64));
-    results.push_back(buildEquiPartitionResult(ins, 4, 1, 16, false, true, 128));
-    results.push_back(buildEquiPartitionResult(ins, 2, 1, 32, false, true, 256));
+    ins.mbsInBatch = 128;
+    results.push_back(buildEquiPartitionResult(ins, 32, 1, 2, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 16, 1, 4, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 8, 1, 8, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 4, 1, 16, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 2, 1, 32, false, true));
+    ins.mbsInBatch = 512;
+    results.push_back(buildEquiPartitionResult(ins, 32, 1, 2, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 16, 1, 4, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 8, 1, 8, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 4, 1, 16, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 2, 1, 32, false, true));
     results.push_back(-1e30);
     results.push_back(-1e30);
     results.push_back(-1e30);
-    results.push_back(buildEquiPartitionResult(ins, 32, 2, 1, false, true, 4));
-    results.push_back(buildEquiPartitionResult(ins, 16, 4, 1, false, true, 8));
-    results.push_back(buildEquiPartitionResult(ins, 8, 8, 1, false, true, 16));
-    results.push_back(buildEquiPartitionResult(ins, 32, 2, 1, false, true, 16));
-    results.push_back(buildEquiPartitionResult(ins, 16, 4, 1, false, true, 32));
-    results.push_back(buildEquiPartitionResult(ins, 8, 8, 1, false, true, 64));
+    ins.mbsInBatch = 128;
+    results.push_back(buildEquiPartitionResult(ins, 32, 2, 1, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 16, 4, 1, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 8, 8, 1, false, true));
+    ins.mbsInBatch = 512;
+    results.push_back(buildEquiPartitionResult(ins, 32, 2, 1, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 16, 4, 1, false, true));
+    results.push_back(buildEquiPartitionResult(ins, 8, 8, 1, false, true));
     for (double res : results) {
         cout << res << endl;
     }
@@ -2123,11 +2140,11 @@ void correlationExperiment () {
 
 void scalability () {
     for (int bertSize : {32,48,64,96}) {
-        for (int maxBatchSize : {512,2048}) {
-            if (bertSize == 96 && maxBatchSize == 2048) continue;
+        for (int batchSize : {480,512,1920,2048}) {
+            //if (bertSize == 96 && batchSize == 2048) continue;
             Instance ins = readBERTA100(bertSize);
             stringstream ss;
-            ss << "bert" << bertSize << "bs" << maxBatchSize << "times.txt";
+            ss << "bert" << bertSize << "bs" << batchSize << "times.txt";
             ofstream of(ss.str());
             of << "k time stddev\n";
             for (int k : {8,16,32,64,128,256,512,1024,1536,2048}) {
@@ -2135,7 +2152,7 @@ void scalability () {
                 vector<double> times;
                 for (int t = 0; t < tries; ++t) {
                     ins.maxDevices = k;
-                    ins.maxBatchSize = min(k, maxBatchSize);
+                    ins.mbsInBatch = batchSize;
                     clock_t startTime = clock();
                     Graph g(ins);
                     g.runDP();
@@ -2156,21 +2173,21 @@ void runAndWrite (Graph &g, const string &filenameCore) {
     ofstream ofDevices(filenameCore + "-devices.txt");
     ofDevices << "k TPS\n";
     for (int k = 8; k <= g.ins.maxDevices; ++k) {
-        const double TPS_k = g.dp[g.idOfFullSet][k][g.ins.maxBatchSize];
+        const double TPS_k = g.dp[g.idOfFullSet][k][g.boundOnS];
         if (TPS_k > INFTY/2) {
             continue;
         }
         ofDevices << k << " " << setprecision(7) << fixed << TPS_k << "\n";
     }
 
-    ofstream ofBatch(filenameCore + "-batch.txt");
-    ofBatch << "s TPS\n";
-    for (int s = 8; s <= g.ins.maxBatchSize; ++s) {
+    ofstream ofSBound(filenameCore + "-sbound.txt");
+    ofSBound << "s TPS\n";
+    for (int s = 8; s <= g.boundOnS; ++s) {
         const double TPS_s = g.dp[g.idOfFullSet][g.ins.maxDevices][s];
         if (TPS_s > INFTY/2) {
             continue;
         }
-        ofBatch << s << " " << setprecision(7) << fixed << TPS_s << "\n";
+        ofSBound << s << " " << setprecision(7) << fixed << TPS_s << "\n";
     }
 }
 
@@ -2179,13 +2196,11 @@ void runAndWrite (Graph &g, const string &filenameCore) {
 void runPD2BWAndWrite (Instance &ins, const string &filenameCore, bool useTensorParallelism, bool tryPuttingNonTransformerNodesSeparately) {
 
     const int backupMaxDevices = ins.maxDevices;
-    const int backupMaxBatchSize = ins.maxBatchSize;
 
     ofstream ofDevices(filenameCore + "-devices.txt");
     ofDevices << "k TPS\n";
     for (int k : {8,16,32,64,128,256,512,768,1024,1024+256,1024+512,1024+512+256,2048}) {
         ins.maxDevices = k;
-        ins.maxBatchSize = min(backupMaxBatchSize, k);
         Graph g(ins);
         ofDevices << k << " " << setprecision(7) << fixed << g.getTPSForResult(runPipeDream2BWPlanner(ins, useTensorParallelism, tryPuttingNonTransformerNodesSeparately)) << endl;
     }
@@ -2194,63 +2209,64 @@ void runPD2BWAndWrite (Instance &ins, const string &filenameCore, bool useTensor
 
 
     ofstream ofBatch(filenameCore + "-batch.txt");
-    ofBatch << "s TPS\n";
-    for (int s : {8,16,32,64,128,256,256+128,512,512+128,512+256,512+256+128,1024}) {
-        ins.maxBatchSize = min(ins.maxDevices, s);
+    ofBatch << "bs TPS\n";
+    for (int bs : {8,16,32,64,128,256,256+128,512,512+128,512+256,512+256+128,1024}) {
+        ins.mbsInBatch = bs;
         Graph g(ins);
-        ofBatch << s << " " << setprecision(7) << fixed << g.getTPSForResult(runPipeDream2BWPlanner(ins, useTensorParallelism, tryPuttingNonTransformerNodesSeparately)) << endl;
+        ofBatch << bs << " " << setprecision(7) << fixed << g.getTPSForResult(runPipeDream2BWPlanner(ins, useTensorParallelism, tryPuttingNonTransformerNodesSeparately)) << endl;
     }
-
-    ins.maxBatchSize = backupMaxBatchSize;
 }
 
 
 // measuring runtime
-void parallelizabilityExperiment (int bertSize, int memSize, int maxBatchSize) {
+void parallelizabilityExperiment (int bertSize, int memSize, int batchSize) {
     Instance ins = readBERTA100(bertSize);
     ins.maxDevices = 2048;
     ins.maxMemoryPerDevice = memSize * 1.0 * (1 << 30);
-    ins.maxBatchSize = maxBatchSize;
+    ins.mbsInBatch = batchSize;
     Graph g(ins);
 
     // Piper
-    runAndWrite(g, "parallel-piper-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize));
+    runAndWrite(g, "parallel-piper-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize));
 
     DATA_PARALLELISM_ALLOWED = false;
-    runAndWrite(g, "parallel-nodp-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize));
+    runAndWrite(g, "parallel-nodp-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize));
     DATA_PARALLELISM_ALLOWED = true;
 
     TENSOR_PARALLELISM_ALLOWED = false;
-    runAndWrite(g, "parallel-notp-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize));
+    runAndWrite(g, "parallel-notp-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize));
     TENSOR_PARALLELISM_ALLOWED = true;
 
     ACTIVATION_RECOMPUTATION_ALLOWED = false;
-    runAndWrite(g, "parallel-noar-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize));
+    runAndWrite(g, "parallel-noar-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize));
     ACTIVATION_RECOMPUTATION_ALLOWED = true;
 
-    //runPD2BWAndWrite(ins, "parallel-equi-no sep-no-TP-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize), false, false);
-    //runPD2BWAndWrite(ins, "parallel-equi-no sep-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize), true, false);
-    runPD2BWAndWrite(ins, "parallel-equi-no-TP-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize), false, true);
-    runPD2BWAndWrite(ins, "parallel-equi-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(maxBatchSize), true, true);
+    //runPD2BWAndWrite(ins, "parallel-equi-no sep-no-TP-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize), false, false);
+    //runPD2BWAndWrite(ins, "parallel-equi-no sep-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize), true, false);
+    runPD2BWAndWrite(ins, "parallel-equi-no-TP-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize), false, true);
+    runPD2BWAndWrite(ins, "parallel-equi-" + to_string(bertSize) + "-" + to_string(memSize) + "GB-bs" + to_string(batchSize), true, true);
 }
 
 
 void runResnet () {
-for (pair<int,double> mm : vector<pair<int,double>>({
+    vector<pair<int,double>> pairs = {
         {8, 4.0}, {8, 8.0},
         {16, 1.5}, {16, 2.0}, {16, 4.0}, {16, 8.0},
         {32, 1.5}, {32, 2.0}, {32, 4.0}, {32, 8.0},
-        {64, 1.0}, {64, 1.5}, {64, 2.0}, {64, 4.0}, {64, 4.0},
+        {64, 1.0}, {64, 1.5}, {64, 2.0}, {64, 4.0},
         {128, 1.0}, {128, 1.5}, {128, 2.0}, {128, 4.0},
-        {8, 16.0}, {16, 16.0}, {32, 16.0}, {64, 8.0}, {64, 16.0}, {128, 8.0}, {128, 16.0}
-    })) {
+        {8, 16.0}, {16, 16.0}, {32, 16.0}, {64, 8.0}, {64, 16.0},
+        {128, 8.0}, {128, 16.0}
+    };
+    sort(pairs.begin(), pairs.end());
+    for (pair<int,double> mm : pairs) {
         cerr << endl << endl << endl << endl;
         DBG(mm.first);
         DBG(mm.second);
         Instance ins = readResnet();
         ins.maxMemoryPerDevice = mm.second * (1 << 30);
         ins.maxDevices = mm.first;
-        ins.maxBatchSize = ins.maxDevices;
+        //ins.mbsInBatch = 1920*4;
         ins.bandwidth = 25.0 * (1LL << 30);
         
         // our alg
@@ -2266,16 +2282,21 @@ for (pair<int,double> mm : vector<pair<int,double>>({
 
         Result equi = runPipeDream2BWPlannerNonTransformer(ins, false);
         double equiTPS = equi.stages.empty() ? 1e30 : g.getTPSForResult(equi);
-        double ratio = ourTPS / equiTPS;
+        double ratio = equi.stages.empty() ? 0 : ourTPS / equiTPS;
 
-        cout << mm.first << " " << mm.second << " " << runtime << " " << ourTPS << " "
-             << equiTPS << " " << ratio << "\n";
+        cout << mm.first << " & "
+             << mm.second << " & "
+             << setprecision(3) << fixed << ourTPS << " & ";
+        if (equi.stages.empty()) cout << "OOM"; else cout << setprecision(3) << fixed << equiTPS;
+        cout << " & "
+             << setprecision(3) << fixed << ratio << "$\\times$ & "
+             << setprecision(1) << fixed << runtime << "s \\\\\n";
     }
 }
 
 
 void runGNMT () {
-    for (pair<int,double> mm : vector<pair<int,double>>({
+    vector<pair<int,double>> pairs = {
         {2, 2.5}, {2, 3.5},
         {4, 1.2}, {4, 2.5},
         {8, 0.6}, {8, 1.2}, {8, 2.4},
@@ -2283,14 +2304,16 @@ void runGNMT () {
         {32, 0.3},
         {64, 0.3},
         {32, 0.8}
-    })) {
+    };
+    sort(pairs.begin(), pairs.end());
+    for (pair<int,double> mm : pairs) {
         cerr << endl << endl << endl << endl;
         DBG(mm.first);
         DBG(mm.second);
         Instance ins = readGNMT();
         ins.maxMemoryPerDevice = mm.second * (1 << 30);
         ins.maxDevices = mm.first;
-        ins.maxBatchSize = ins.maxDevices;
+        //ins.mbsInBatch = 256;
         ins.bandwidth = 25.0 * (1LL << 30);
         
         // our alg
@@ -2306,10 +2329,15 @@ void runGNMT () {
 
         Result equi = runPipeDream2BWPlannerNonTransformer(ins, false);
         double equiTPS = equi.stages.empty() ? 1e30 : g.getTPSForResult(equi);
-        double ratio = ourTPS / equiTPS;
+        double ratio = equi.stages.empty() ? 0 : ourTPS / equiTPS;
 
-        cout << mm.first << " " << mm.second << " " << runtime << " " << ourTPS << " "
-             << equiTPS << " " << ratio << "\n";
+        cout << mm.first << " & "
+             << mm.second << " & "
+             << setprecision(3) << fixed << ourTPS << " & ";
+        if (equi.stages.empty()) cout << "OOM"; else cout << setprecision(3) << fixed << equiTPS;
+        cout << " & "
+             << setprecision(3) << fixed << ratio << "$\\times$ & "
+             << setprecision(1) << fixed << runtime << "s \\\\\n";
     }
 }
 
@@ -2317,8 +2345,8 @@ void runGNMT () {
 int main (int argc, char **argv) {
     plots(); // generates data for the bar plots (Fig. 1)
 
-    parallelizabilityExperiment(32, 8, 512); // Fig. 2a
-    parallelizabilityExperiment(32, 8, 256); // Fig. 2b
+    parallelizabilityExperiment(32, 8, 960); // Fig. 2a
+    parallelizabilityExperiment(32, 8, 512); // Fig. 2b
 
     scalability(); // Fig. 3
 
@@ -2330,6 +2358,7 @@ int main (int argc, char **argv) {
     OUTPUT_KNAPSACK_INSTANCES_FOR_INSPECTION = false;
 
     // additional experiments on Resnet50 and GNMT
-    runResnet();
     runGNMT();
+    cout << endl;
+    runResnet();
 }

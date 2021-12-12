@@ -2,7 +2,7 @@
   "maxDevices": 10,
   "maxMemoryPerDevice": 80000000000.0,
   "bandwidth": 25000000000.0,
-  "maxBatchSize": 128,
+  "mbsInBatch": 1920,
   "nodes": [
     {
       "id": 0,
